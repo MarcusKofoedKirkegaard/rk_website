@@ -1,0 +1,45 @@
+.Hjem {
+   
+    /* background-position: center center; This property centers the background image */
+    /* background-repeat: no-repeat; This property ensures that the background image does not repeat */
+    /* This property sets the height of the background to 100% of the viewport height */
+    /* padding: 10px; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+h1{
+    /* padding: 0px 55% 0px 50px; */
+    font-size: 50pt;
+    color: black;
+}
+
+p{
+    /* padding: 0px 55% 0px 50px; */
+    color: black;
+    
+}   
+
+#attention{
+    background-image: url('/public/images/IMG_1780.jpg'); /* Replace 'path_to_your_image.jpg' with the actual path to your background image */
+    background-size: cover; /* This property ensures that the background image covers the entire element */
+    height: 500px; 
+    color: #fff; /* Set the text color to contrast with the background */
+    /* padding-top: 20px; */
+    padding: 10px 55% 10px 50px;
+}
+
+#offer{
+    background-color: lightgray;
+    padding: 10px 55% 10px 50px;
+    height: 250px; 
+    margin: 50px;
+    border-radius: 10pt;
+}
+
+#more{
+    background-color: lightgray;
+    height: 250px; 
+    padding: 10px 55% 10px 50px;
+    margin: 50px;
+    border-radius: 10pt;
+}

@@ -1,0 +1,23 @@
+/* #footerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+    background-color: #f8f8f8; 
+  }
+  
+  footer {
+    text-align: center;
+    width: 100%; 
+  }
+  
+  footer p {
+    margin: 0; 
+  }
+   */
+
+
+#footerDiv{
+    background-color: #f9ebbd;
+    /* background-color: black; */
+}
