@@ -20,7 +20,9 @@ main {
   /* padding: 20px 0; */
 }
 
-
+h1 {
+  padding-left: 50px;
+}
 /* CSS styiling for Footer */
 #footerDiv {
   /* position: fixed; */

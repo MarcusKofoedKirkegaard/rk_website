@@ -1,5 +1,5 @@
 {
-  "name": "rk_nutrition_website",
+  "name": "rk_website",
   "version": "0.1.0",
   "homepage": "https://marcuskofoedkirkegaard.github.io/rk_website",
   "private": true,
@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh": "^2.8.9",
     "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-cookie-consent": "^8.0.1",

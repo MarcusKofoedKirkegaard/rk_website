@@ -15,7 +15,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/rk_website">
       <div className='App'>
         <Header/>
         <main className='content'>
