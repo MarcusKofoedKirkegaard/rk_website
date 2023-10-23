@@ -31,15 +31,15 @@ nav a {
 } 
 
 nav p:hover{
-    color: lightgray;
+    color: #b5ab9e;
 }
 
 #headermenu p.active {
-    color: lightgray;
+    color: #b5ab9e;
 }
 
 header p:hover {
-    color: lightgray;
+    color: #b5ab9e;
     font-size: 12pt;
     animation: scaleAnimation 0.3s ease forwards; /* Added scale animation on hover */
 }

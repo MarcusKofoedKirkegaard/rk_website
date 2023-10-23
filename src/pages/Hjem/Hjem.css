@@ -19,17 +19,23 @@ p{
     
 }   
 
+#attention h1 {
+    padding: 0px;
+}
+
 #attention{
     background-image: url('/public/images/IMG_1780.jpg'); /* Replace 'path_to_your_image.jpg' with the actual path to your background image */
     background-size: cover; /* This property ensures that the background image covers the entire element */
-    height: 500px; 
-    color: #fff; /* Set the text color to contrast with the background */
+    min-height: 500px;
+    /* min-height: 500px;
+    max-height: 500px;  */
+    color: #F5F5DC; /* Set the text color to contrast with the background */
     /* padding-top: 20px; */
-    padding: 10px 55% 10px 50px;
+    padding: 10px 55% 10% 50px;
 }
 
 #offer{
-    background-color: lightgray;
+    background-color: #b5ab9e;
     padding: 10px 55% 10px 50px;
     height: 250px; 
     margin: 50px;
@@ -37,7 +43,7 @@ p{
 }
 
 #more{
-    background-color: lightgray;
+    background-color: #b5ab9e;
     height: 250px; 
     padding: 10px 55% 10px 50px;
     margin: 50px;

@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className='header'>
           <nav>
-          <div id='headerlogo'>
+          <div id='headerlogo' style={{width: "50%"}}>
             <Link to="/">
               <h1 id='Logo'> <b> RIKKE KIRKEGAARD </b> </h1> 
             </Link>

@@ -2,13 +2,16 @@ import './Priser.css';
 import React from 'react';
 import { Box, Table, TableRow, TableCell } from '@mui/material'
 
+
+// Create A themed Table and convert to Typescript
+
 const Priser  = () => {
     return (
         <div>
-            <h1 style={{paddingLeft: '150px' }}>Prisliste</h1>
+            <h1 style={{paddingLeft: '10%' }}>Prisliste</h1>
 
             <Box sx={{paddingBottom: '50px'}}>
-                <Table sx={{width: '1000px', margin: 'auto'}}>
+                <Table sx={{width: '80%', margin: 'auto'}}>
                     
                     <TableRow>
                         <TableCell align='left'> <b>Opstart</b> </TableCell>
@@ -33,7 +36,7 @@ const Priser  = () => {
             </Box>
 
             <Box sx={{paddingBottom: '50px'}}>
-                <Table sx={{width: '1000px', margin: 'auto'}}>
+                <Table sx={{width: '80%', margin: 'auto'}}>
                     <TableRow>
                         <TableCell>  <b>Forløb</b> </TableCell>
                     </TableRow>
@@ -57,7 +60,7 @@ const Priser  = () => {
             </Box>
 
             <Box sx={{paddingBottom: '50px'}}>
-                <Table sx={{width: '1000px', margin: 'auto'}}>
+                <Table sx={{width: '80%', margin: 'auto'}}>
                     <TableRow>
                         <TableCell>  <b>Online</b> </TableCell>
                     </TableRow>

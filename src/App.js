@@ -3,10 +3,11 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Hjem from './pages/Hjem/Hjem.jsx';
 import Forløb from './pages/Forløb/Forløb.jsx';
-import Spiseforstyrrelse from './pages/Spiseforstyrrelse/Spiseforstyrrelse.jsx';
-import OmMig from './pages/OmMig/OmMig.jsx';
+import Spiseforstyrrelse from './pages/Spiseforstyrrelse/Spiseforstyrrelse.tsx';
+import OmMig from './pages/OmMig/OmMig.tsx';
 import Priser from './pages/Priser/Priser.jsx';
-import Kontakt from './pages/Kontakt/Kontakt.jsx';
+import Kontakt from './pages/Kontakt/Kontakt.tsx';
+import MobileMenu from './components/MobileMenu.jsx';
 import CookieConsentComponent from './components/Cookies.jsx';
 
 
@@ -15,7 +16,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <Router basename="/rk_website">
+    <Router basename="/rk_website/">
       <div className='App'>
         <Header/>
         <main className='content'>
@@ -29,10 +30,13 @@ function App() {
           </Routes>
 
         <CookieConsentComponent/>
-        {/* <MobileMenu/> */}
+        <MobileMenu/>
         
         </main>
         <Footer/>
+        <div id='credits' style={{fontSize: '8pt', backgroundColor: 'white', textAlign: 'center'}}>
+          <p style={{margin: "2px"}}>Made by Marcus Kofoed Kirkegaard |  Copyright © 2023</p>
+        </div>
       </div>
     </Router>
   );

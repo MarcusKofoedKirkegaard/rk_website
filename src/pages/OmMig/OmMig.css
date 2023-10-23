@@ -1,9 +1,9 @@
 .ommig{
- display: inline-grid;
+ /* display: inline-grid; */
 }
 
-#leftside{
-    width: 1000px;
+/* #leftside{
+    width: 1000px; 
     grid-column-start: 1;
     grid-column-end: 1;
 }
@@ -12,11 +12,16 @@
     text-align: center;
     grid-column-start: 2;
     grid-column-end: 2;
-}
+} */
 
 #info{
     text-align: left;
     margin-top: 100px;
-    background-color: #bfbfbf;
+    background-color: #b5ab9e;
     padding: 10px;
+    
+}
+
+#info p{
+    color: white;
 }
