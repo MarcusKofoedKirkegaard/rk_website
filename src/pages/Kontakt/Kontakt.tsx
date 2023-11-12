@@ -7,6 +7,7 @@ import { FaLinkedin, FaGithub, FaMapMarkerAlt } from 'react-icons/fa';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import PlaceIcon from '@mui/icons-material/Place';
 
 const Kontakt: React.FunctionComponent = () => {
     
@@ -14,7 +15,7 @@ const Kontakt: React.FunctionComponent = () => {
     const location = [56.15944, 10.21263];
 
     const customIcon = L.icon({
-        iconUrl: 'mui/icons-material/Room',
+        iconUrl: 'mui/icons-material/Place',
         iconSize: [60, 60],
       });  
     return (

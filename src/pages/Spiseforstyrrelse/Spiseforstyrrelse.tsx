@@ -15,7 +15,9 @@ const Spiseforstyrrelse  = () => {
     
     const string1 = "Spiseforstyrrelse kan...";
     return (
-        <div id='sf' style={{minHeight: "550px"}}>
+        <div style={{minHeight: "550px"
+
+        }}>
             <h1>Spiseforstyrrelse</h1>
         
             <StyledCard node={string1}/>

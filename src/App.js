@@ -2,13 +2,13 @@ import './App.css';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Hjem from './pages/Hjem/Hjem.jsx';
-import Forløb from './pages/Forløb/Forløb.jsx';
+import Forløb from './pages/Forløb/Forløb.tsx';
 import Spiseforstyrrelse from './pages/Spiseforstyrrelse/Spiseforstyrrelse.tsx';
 import OmMig from './pages/OmMig/OmMig.tsx';
-import Priser from './pages/Priser/Priser.jsx';
+import Priser from './pages/Priser/Priser.tsx';
 import Kontakt from './pages/Kontakt/Kontakt.tsx';
 import MobileMenu from './components/MobileMenu.jsx';
-import CookieConsentComponent from './components/Cookies.jsx';
+import CookieConsentComponent from './components/Cookies.tsx';
 
 
 import React from 'react';

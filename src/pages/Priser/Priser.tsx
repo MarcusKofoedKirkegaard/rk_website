@@ -1,0 +1,373 @@
+import './Priser.css';
+import React, { useState } from 'react';
+import { Box, Table, TableRow, TableCell, TableHead, TableBody, Typography, Card, Button, Dialog, DialogTitle, DialogContent, DialogActions, Alert, IconButton, Tooltip, Accordion, AccordionSummary, AccordionDetails, Stack, CardHeader, CardContent, Tabs, Tab, styled, TooltipProps, tooltipClasses } from '@mui/material'
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import TelegramIcon from '@mui/icons-material/Telegram';
+
+// Create A themed Table and convert to Typescript
+
+
+interface TabPanelProps {
+    children?: React.ReactNode;
+    index: number;
+    value: number;
+}
+
+const CustomTabPanel: React.FunctionComponent<TabPanelProps> = ({children, value, index, ...other}) => {
+
+    return (
+    <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`simple-tabpanel-${index}`}
+        aria-labelledby={`simple-tab-${index}`}
+        {...other}
+    >
+        {value === index && (
+        <Box sx={{ p: 3, minHeight: "150px"}}>
+            <Typography>{children}</Typography>
+        </Box>
+        )}
+    </div>
+    );
+}
+
+function a11yProps(index: number) {
+    return {
+      id: `simple-tab-${index}`,
+      'aria-controls': `simple-tabpanel-${index}`,
+    };
+}
+
+const BasicTabs: React.FunctionComponent = () =>{
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+    };
+
+    return (
+    <Box sx={{ width: '100%'}}>
+        <Box sx={{ borderBottom: 1, borderColor: "divider", 
+        display: "flex", justifyContent: 'space-evenly'
+        }}>
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                <Tab sx={{marginLeft: "50px", padding: "0, 50px, 0, 50px", marginRight: "50px"}} label="Betaling" {...a11yProps(0)} />
+                <Tab sx={{marginLeft: "50px",padding: "0, 50px, 0, 50px", marginRight: "50px"}} label="Afbudsregler" {...a11yProps(1)} />
+                <Tab sx={{marginLeft: "50px", padding: "0, 50px, 0, 50px",marginRight: "50px"}} label="Tilskud" {...a11yProps(2)} />
+        </Tabs>
+        </Box>
+        <CustomTabPanel value={value} index={0}>
+            Faktura sendes pr. email     
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={1}>
+            Ændringer eller aflysning bedes foretaget hurtigst muligt og senest kl. 12.30 hverdagen før din aftale (ved en aftale om mandagen skal afbuddet gives senest fredagen før).
+            Ved for sen aflysning eller udeblivelse opkræves den fulde pris for den aftalte tid uanset afbuddets årsag. Du kan sende en SMS eller indtale en besked på telefonsvareren, hvis jeg er optaget.
+            Hvis du ikke kan møde op til din aftale grundet sygdom, kan jeg istedet tilbyde en online samtale.
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={2}>
+            Jeg har ikke overenskomst med sygesikringen og tager derfor ikke imod en henvisning fra lægen.
+            Er du medlem af Sygeforsikringen danmark kan du sandsynligvis få et tilskud på 300 kr. pr. samtale (max. 7.200 kr. på 12 måneder).  Kontakt Sygforesikringen danmark for at høre mere om, hvilke muligheder, der er for dig.
+            Har du en sundhedsforsikring, kan denne sandsynligvis benyttes hos mig, da jeg er autoriseret psykolog af Dansk Psykolognævn. Kontakt din sundhedsforsikring og forhør dig om mulighederne for tilskud til samtalerne. Det kan også være, at din arbejdsplads har tegnet en sundhedsforsikring til dækning af psykologsamtaler. Du kan spørge din arbejdsplads, eller du kan kontakte forsikringsselskabet direkte.
+        </CustomTabPanel>
+    </Box>
+    );
+}
+
+const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
+    <Tooltip {...props} classes={{ popper: className }} />
+  ))(({ theme }) => ({
+    [`& .${tooltipClasses.tooltip}`]: {
+      backgroundColor: "#b5ab9e",
+      color: '#b5ab9e',
+      boxShadow: "#b5ab9e",
+      fontSize: 11,
+    },
+  }));
+
+
+const Priser: React.FunctionComponent = () => {
+    const [showContactDialog, setShowContactDialog] = useState(false);
+    const [showStateRate, setShowStateRate] = useState(false);
+    const [showPsykoedukation, setShowPsykoedukation] = useState(false);
+    const [value, setValue] = useState(1);
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+        setValue(newValue);
+      };
+
+
+
+    return (
+        <div>
+            <h1 style={{paddingLeft: '10%' }}>Prisliste</h1>
+
+            <Box sx={{paddingBottom: '50px'}}>
+
+                <Dialog open={showContactDialog}>
+                    <DialogTitle> Kontakt mig </DialogTitle>
+                    <DialogContent>
+                        Send mig en mail, så vi kan finde ud af hvad jeg kan hjælpe dig med, 
+                        og hvad der passer dig.
+                    </DialogContent>
+                    <DialogActions>
+                        <Button variant='outlined' onClick={() => setShowContactDialog(false)} sx={{borderColor: "#b5ab9e", color: "#b5ab9e", '&:hover': {borderColor: "#b5ab9e", backgroundColor: "#A3A798", color: "white"}}}>Ikke lige nu</Button>
+                        <Button variant="contained" href='mailto:rikkekirkegaard@example.dk' sx={{color: "white", backgroundColor: "#b5ab9e", '&:hover': {borderColor: "#b5ab9e", backgroundColor: "#A3A798", color: "white"}}}> Send Mig en mail</Button>
+
+                    </DialogActions>
+                </Dialog>
+
+                {/* <Card sx={{width: "80%", margin: "auto", marginBottom: "20px", backgroundColor: "#b5ab9e"}}> */}
+                <Typography sx={{color: "white", marginLeft: "10px"}}>                
+                    <Button onClick={() => setShowContactDialog(true)} sx={{color: "white", backgroundColor: "#b5ab9e", marginLeft: "130px", marginBottom: "25px", '&:hover': {borderColor: "#b5ab9e", backgroundColor: "#A3A798", color: "white"}}}>
+                    <TelegramIcon sx={{paddingRight: "5px"}}/>
+                            Book en 10 min telefonsamtale med mig, og find ud af om vi er et godt match.
+                    </Button>
+                </Typography>
+                {/* </Card> */}
+                <Table sx={{width: '80%', margin: 'auto'}}>
+                    <TableHead>
+                        <TableCell>
+                            <Typography variant='h6'>Samtaler </Typography>
+                        </TableCell>
+                    </TableHead>
+                    <TableBody>
+                        <TableRow>
+                            <TableCell align='left'> Opstartskonsultation (90 min)</TableCell>
+                            <TableCell align='right'> kr.   1.050,00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell align='left'>Opstartskonsultation (90 min) + kostplan</TableCell>
+                            <TableCell align='right'>kr.   1.450,00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell align='left'>Opfølgningssamtale (60 min)</TableCell>
+                            <TableCell align='right'> kr.   800,00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell align='left'>Opfølgningssamtale (60 min) + tilpasning af kostplan</TableCell>
+                            <TableCell align='right'>kr.   900,00</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
+            </Box>
+
+            <Box sx={{paddingBottom: '50px'}}>
+                <Table sx={{width: '80%', margin: 'auto'}}>
+                    <TableHead>
+                        <TableCell>
+                            <Typography variant='h6'>Forløb</Typography>
+                        </TableCell>        
+                    </TableHead>
+                    <TableBody>
+                        <TableRow>
+                            <TableCell align='left'>Opstartskonsultation inkl. 1 x opfølgning </TableCell>
+                            <TableCell align='right'>kr.   1.750,00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell align='left'> Opstartskonsultation + kostplan + 1 x opfølgningssamtale</TableCell>
+                            <TableCell align='right'> kr.   2.200,00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell align='left'>3 x opfølgningssamtale </TableCell>
+                            <TableCell align='right'> kr.   2.200,00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell align='left'>3 x opfølgningssamtale + tilpasning af kostplan</TableCell>
+                            <TableCell align='right'>kr.    2.500,00</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
+            </Box>
+
+            <Box sx={{paddingBottom: '50px'}}>
+                <Table sx={{width: '80%', margin: 'auto'}}>
+                    <TableHead>
+                        <TableCell>
+                            <Typography variant='h6'> Online</Typography>
+                        </TableCell>
+                    </TableHead>
+                    <TableBody>
+                        <TableRow>
+                            <TableCell align='left'> Opfølgningssamtale online (60 min) </TableCell>
+                            <TableCell align='right'> kr.   800,00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell align='left'>Opfølgningssamtale online (60 min) + tilpasning af kostplan</TableCell>
+                            <TableCell align='right'>kr.   900,00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell align='left'>3 x opfølgningssamtale online </TableCell>
+                            <TableCell align='right'> kr.   2.200,00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell align='left'>3 x opfølgningssamtale online + tilpasning af kostplan</TableCell>
+                            <TableCell align='right'>kr.    2.500,00</TableCell>
+                        </TableRow>
+                    </TableBody>        
+                </Table>
+            </Box>
+
+            <Box sx={{paddingBottom: '50px'}}>
+                <Table sx={{width: '80%', margin: 'auto'}}>
+                    <TableHead>
+                        <TableCell>
+                            <Typography variant='h6'> Akupunktur</Typography>
+                        </TableCell>
+                
+                    </TableHead>
+                    <TableBody>
+                        <TableRow>
+                            <TableCell align='left'> NADA Akupunktur </TableCell>
+                            <TableCell align='right'> kr.   75,00</TableCell>
+                        </TableRow>
+                    </TableBody>        
+                </Table>
+            </Box>
+
+            <Box sx={{paddingBottom: '50px'}}>
+                <Table sx={{width: '80%', margin: 'auto'}}>
+                    <TableHead>
+                        <TableCell>
+                            <Typography variant='h6'> Vejledning</Typography>
+                        </TableCell>
+                    </TableHead>
+                    <TableBody>
+                        <TableRow>
+                            <TableCell align='left'> 
+                                {/* Psykoedukation (60 min)
+                                <Tooltip placement='top' arrow title="Psykoeduktation er noget avanceret noget jeg ikke forstår">
+                                    <InfoOutlinedIcon onClick={() => setShowPsykoedukation(true)} fontSize='inherit'/>
+                                </Tooltip> */}
+                                
+                                <Accordion 
+                                    disableGutters
+                                    elevation={0}
+                                    sx={{
+                                        '&:before': {
+                                            display: 'none',
+                                        }, paddingLeft: "0px"
+                                    }}
+                                >
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                        sx={{paddingLeft: "0px"}}
+                                    >
+                                        Psykoedukation (60 min)
+                                    </AccordionSummary>
+                                    <AccordionDetails>   
+                                        <i>Psykoedukation er undervisning i psyken og henviser her til formidling af viden om spiseforstyrrelse samt spiseforstyrrelsessymptomer og -adfærd.</i>
+                                    </AccordionDetails>
+                                </Accordion>
+
+                            </TableCell>
+                            <TableCell align='right' sx={{minWidth: "100px"}}> kr. 1.000,00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell align='left' >
+                                <Accordion 
+                                    disableGutters
+                                    elevation={0}
+                                    sx={{
+                                        '&:before': {
+                                        display: 'none',
+                                        }, 
+                                        paddingLeft: "0px"
+                                    }}
+                                >
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                        sx={{paddingLeft: "0px"}}
+                                    >
+                                        Spisevejledning (60 min)
+                                    </AccordionSummary>
+                                    <AccordionDetails >   
+                                        <i>
+                                            Spisevejledning kan være konkret spisestøtte til måltider. Det handler her om at få hjælp
+                                            til at skabe en struktur og en tryg ramme, så det sværre måltid kan trænes.
+                                            Spisevejledning kan foregå i praksis sammen med den spiseforstyrrede eller som vejledning til pårørende/omsorgspersoner.
+                                        </i>
+                                    </AccordionDetails>
+                                </Accordion>
+                            </TableCell>
+                            <TableCell align='right'>kr. 1.000,00</TableCell>
+                        </TableRow>
+                    </TableBody>        
+                </Table>
+            </Box>
+            <Box sx={{width: "80%", margin: "auto", marginBottom: "20px", display: "flex", backgroundColor: "#A3A798", padding: "10px", borderRadius: "10px", color: "white",
+                tooltip:{backgroundColor: "red", color: "green"}
+            }}>
+                
+                <Typography sx={{color: "white", paddingRight: "5px"}}> Kørselstakst ifølge statens takster</Typography>
+                <LightTooltip title={<Typography sx={{fontSize: "12pt", color: "white", padding: "15px"}} >
+                Statens kørselstakst i 2023:
+                   <ul style={{margin: "0"}}>  <li >3,73 kr. pr. km.</li></ul>
+                </Typography>} placement='top' arrow >
+                    <InfoOutlinedIcon fontSize='small'/>
+                </LightTooltip>
+            </Box>
+            <Box sx={{width: "80%", margin: "auto"}}>
+                {/* <Card>
+                    <CardHeader title="Betaling"/>
+                    <CardContent>
+                        <Typography>Faktura sendes pr. email</Typography>
+                    </CardContent> 
+                </Card>
+                <Card>
+                    <CardHeader title="Afbudsregler"/>
+                    <CardContent>
+                        <Typography>Faktura sendes pr. email</Typography>
+                    </CardContent> 
+                </Card>
+                <Card>
+                    <CardHeader title="Betaling"/>
+                    <CardContent>
+                        <Typography>Faktura sendes pr. email</Typography>
+                    </CardContent> 
+                </Card> */}
+
+                <BasicTabs/>
+
+                {/* <Tabs value={value} onChange={handleChange} >
+                    <Box sx={{width: "100%", display: 'flex', flexFlow: "wrap", justifyContent: 'space-evenly'}}>
+                        <Tab label="Betaling" />
+                        <Tab label="Afbudsregler"/>
+                        <Tab label="Tilskud"/>
+                    </Box>
+                </Tabs> */}
+            </Box>
+            
+            
+            
+
+            {/* <Dialog open={showPsykoedukation}>
+                <DialogTitle> Psykoedukation</DialogTitle>
+                <DialogContent>
+                    Takst: 3,73 kr. pr. km.
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={() => setShowPsykoedukation(false)}>Luk</Button>
+                </DialogActions>
+            </Dialog> */}
+
+
+            {/* <Dialog open={showStateRate}>
+                <DialogTitle> Statens Takster 2023</DialogTitle>
+                <DialogContent>
+                    Takst: 3,73 kr. pr. km.
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={() => setShowStateRate(false)}>Luk</Button>
+                </DialogActions>
+            </Dialog> */}
+            
+        </div>
+    );
+};
+
+export default Priser;
