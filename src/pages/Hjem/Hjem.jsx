@@ -4,7 +4,7 @@ import { Button, Card, Box, Typography } from '@mui/material';
 
 const Hjem = () => {
     return (
-        <div className='Hjem'>
+        <Box sx={{paddingTop: "85px"}}>
             <Box id='attention'>
                 <h1>Rikke Adamsen Kirkegaard</h1>
                 <Card sx={{backgroundColor: 'rgba(181, 171, 158, 0.75)', padding: "10px", marginBottom: "10px", minWidth: "300px"}}>
@@ -18,15 +18,21 @@ const Hjem = () => {
                     backgroundColor: 'rgba(181, 171, 158, 0.25)', '&:hover': {backgroundColor: "#b5ab9e"}}} >Kontakt mig</Button>
                 </a>
             </Box>
-            <Box>
-                <Card id='offer'>
-                    <h2 style={{color: "white"}}>Jeg tilbyder...</h2>
+            <Box sx={{width: "80%", margin: "auto"}}>
+                
+                <h2>Jeg tilbyder</h2>
+                <Card sx={{
+                    backgroundColor: ""
+                }}>
+                    hey
+                    {/* <h2 style={{color: "white"}}>Jeg tilbyder...</h2> */}
                 </Card>
-                <Card id='more'>
+                <h2>More</h2>
+                <Card>
                     <h2 style={{color: "white"}}>More...</h2>
                 </Card>
             </Box>
-        </div>
+        </Box>
     );
 };
 

@@ -5,36 +5,37 @@ import React from 'react';
 
 const StyledCard: React.FunctionComponent<{title: string, text: string}> = ({title, text}) =>{
     return (
-        <Card sx={{padding: "20 px", marginRight: "10px", marginBottom: "20px", 
+        <Card sx={{padding: "20 px", marginBottom: "50px", 
                     backgroundColor: "#b5ab9e", minHeight: "100px",
-                    width: '300px'}}>
-            <p style={{paddingLeft: "10px", color: "white"}}>{title}</p>            
-            <p style={{paddingLeft: "10px", color: "white"}}>{text}</p>
+                    width: "300px", margin: "auto"}}>
+            <Box sx={{margin: "20px"}}>
+                <p style={{color: "white"}}>{title}</p>            
+                <p style={{color: "white"}}>{text}</p>
+            </Box>
         </Card>
     );
 }
 
 const OmMig  = () => {
     return (
-        <div className='ommig' >
-
-            <div id='leftside'>
+        <Box sx={{width: "80%", margin: "auto", paddingTop: "85px"}}>
+            <div>
                 <div >
                     <h1>Hvem er jeg?</h1>
                     
                     <Box sx={{display: 'flex', flexFlow: "auto", marginBottom: "100px", paddingRight: "50px"}}>
-                        <p style={{paddingLeft: "50px"}}>
+                        <p >
                             Jeg er uddannet klinisk diætist fra Århus Universitet i 2008. Samme år er jeg autoriseret af Sundhedsstyrelsen. 
                             Min autorisation betyder, at min vejledning bygger på videnskabelig evidens. 
                             Til trods for min kliniske tilgang vil jeg fremhæve, at det ligger mig meget på sinde, 
                             at jeg ser det hele menneske og nærer empati og nysgerrighed for den person jeg sidder overfor og møder dig der hvor du er.
                         </p>
                         
-                        <div style={{ verticalAlign: "middle", marginLeft: "50px"}}>
+                        <div style={{ verticalAlign: "middle"}}>
                             <img src="images/small.png" alt="" width={"200px"} style={{borderRadius: "50%"}}/>
                         </div>
                     </Box>
-                    <Box sx={{margin: "10px 50px 50px 50px"}}>
+                    <Box sx={{margin: "10px 00px 50px 0px"}}>
                         <Card id='info' sx={{color: "white"}}>
                             <h2>Kvalifikationer</h2>
                             <p>...</p>
@@ -49,7 +50,7 @@ const OmMig  = () => {
                     </Box>
                 </div>
 
-                <div style={{ paddingLeft: "50px"}}>
+                <Box>
                     <h2>Andre siger:</h2>
                     <Tabs variant="scrollable" >       
                         <ListItem>
@@ -71,9 +72,9 @@ const OmMig  = () => {
                             <StyledCard title="Udtalelse 2 - Navn" text="Jeg har været i forløb med Rikke, hvilket..."/>
                         </ListItem>     
                     </Tabs>
-                </div>
+                </Box>
             </div>            
-        </div>
+        </Box>
 
     );
 };

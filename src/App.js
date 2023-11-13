@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './components/Header.jsx';
+import Header from './components/Header.tsx';
 import Footer from './components/Footer.jsx';
 import Hjem from './pages/Hjem/Hjem.jsx';
 import Forløb from './pages/Forløb/Forløb.tsx';

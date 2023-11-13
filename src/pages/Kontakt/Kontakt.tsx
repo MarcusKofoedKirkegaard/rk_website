@@ -19,9 +19,9 @@ const Kontakt: React.FunctionComponent = () => {
         iconSize: [60, 60],
       });  
     return (
-        <div>
+        <Box sx={{width: "80%", margin: "auto", paddingTop: "85px"}}>
             <h1>Kontakt</h1>
-            <Box sx={{paddingLeft: "50px"}}>
+            <Box>
                 <p>Ønsker du at kontakte mig eller booke en samtale kan du kontakte mig på følgende vis:</p>
                 <Stack>
                     <p> Tlf: <b><a href='tel:+4560155586'> +45 60 15 55 86</a></b></p>
@@ -57,7 +57,7 @@ const Kontakt: React.FunctionComponent = () => {
                 </Stack>
             </Box>
 
-        </div>
+        </Box>
         
 
 

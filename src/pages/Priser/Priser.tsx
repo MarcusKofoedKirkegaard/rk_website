@@ -4,6 +4,7 @@ import { Box, Table, TableRow, TableCell, TableHead, TableBody, Typography, Card
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import LaunchIcon from '@mui/icons-material/Launch';
 
 // Create A themed Table and convert to Typescript
 
@@ -63,13 +64,20 @@ const BasicTabs: React.FunctionComponent = () =>{
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
             Ændringer eller aflysning bedes foretaget hurtigst muligt og senest kl. 12.30 hverdagen før din aftale (ved en aftale om mandagen skal afbuddet gives senest fredagen før).
-            Ved for sen aflysning eller udeblivelse opkræves den fulde pris for den aftalte tid uanset afbuddets årsag. Du kan sende en SMS eller indtale en besked på telefonsvareren, hvis jeg er optaget.
-            Hvis du ikke kan møde op til din aftale grundet sygdom, kan jeg istedet tilbyde en online samtale.
+            Ved for sen aflysning eller udeblivelse opkræves 500 kr. (<i>Opkrævningen sendes via faktura</i>) uanset afbuddets årsag. Du kan sende en SMS eller indtale en besked på telefonsvareren, hvis jeg er optaget.
+            Hvis du ikke kan møde op til din aftale grundet sygdom, kan jeg i stedet tilbyde en online samtale.
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-            Jeg har ikke overenskomst med sygesikringen og tager derfor ikke imod en henvisning fra lægen.
-            Er du medlem af Sygeforsikringen danmark kan du sandsynligvis få et tilskud på 300 kr. pr. samtale (max. 7.200 kr. på 12 måneder).  Kontakt Sygforesikringen danmark for at høre mere om, hvilke muligheder, der er for dig.
-            Har du en sundhedsforsikring, kan denne sandsynligvis benyttes hos mig, da jeg er autoriseret psykolog af Dansk Psykolognævn. Kontakt din sundhedsforsikring og forhør dig om mulighederne for tilskud til samtalerne. Det kan også være, at din arbejdsplads har tegnet en sundhedsforsikring til dækning af psykologsamtaler. Du kan spørge din arbejdsplads, eller du kan kontakte forsikringsselskabet direkte.
+            <Stack spacing={2}>
+                <Typography>
+                    Er du medlem af Sygeforsikringen "danmark" kan du få et tilskud på 275 kr. pr. samtale (max. 1.650 kr. inden for 12 måneder).  Kontakt Sygforesikringen "danmark" for at høre mere om, hvilke muligheder, der er for dig.
+                </Typography>
+                <Box>
+                <Button sx={{backgroundColor: "#b5ab9e"}} endIcon={<LaunchIcon/>} variant="contained" href='https://www.sygeforsikring.dk/tilskud/kliniske-diaetister'>Læs mere på Sygeforsikirng.dk</Button>
+                </Box>
+                
+            </Stack>
+            
         </CustomTabPanel>
     </Box>
     );
@@ -99,8 +107,8 @@ const Priser: React.FunctionComponent = () => {
 
 
     return (
-        <div>
-            <h1 style={{paddingLeft: '10%' }}>Prisliste</h1>
+        <Box sx={{width: '80%', margin: "auto", paddingTop: "85px" }}>
+            <h1 >Prisliste</h1>
 
             <Box sx={{paddingBottom: '50px'}}>
 
@@ -118,14 +126,14 @@ const Priser: React.FunctionComponent = () => {
                 </Dialog>
 
                 {/* <Card sx={{width: "80%", margin: "auto", marginBottom: "20px", backgroundColor: "#b5ab9e"}}> */}
-                <Typography sx={{color: "white", marginLeft: "10px"}}>                
-                    <Button onClick={() => setShowContactDialog(true)} sx={{color: "white", backgroundColor: "#b5ab9e", marginLeft: "130px", marginBottom: "25px", '&:hover': {borderColor: "#b5ab9e", backgroundColor: "#A3A798", color: "white"}}}>
+                <Typography sx={{color: "white"}}>                
+                    <Button onClick={() => setShowContactDialog(true)} sx={{color: "white", backgroundColor: "#A3A798", marginBottom: "25px", '&:hover': { backgroundColor: "#b5ab9e", color: "white"}}}>
                     <TelegramIcon sx={{paddingRight: "5px"}}/>
                             Book en 10 min telefonsamtale med mig, og find ud af om vi er et godt match.
                     </Button>
                 </Typography>
                 {/* </Card> */}
-                <Table sx={{width: '80%', margin: 'auto'}}>
+                <Table>
                     <TableHead>
                         <TableCell>
                             <Typography variant='h6'>Samtaler </Typography>
@@ -153,7 +161,7 @@ const Priser: React.FunctionComponent = () => {
             </Box>
 
             <Box sx={{paddingBottom: '50px'}}>
-                <Table sx={{width: '80%', margin: 'auto'}}>
+                <Table>
                     <TableHead>
                         <TableCell>
                             <Typography variant='h6'>Forløb</Typography>
@@ -181,7 +189,7 @@ const Priser: React.FunctionComponent = () => {
             </Box>
 
             <Box sx={{paddingBottom: '50px'}}>
-                <Table sx={{width: '80%', margin: 'auto'}}>
+                <Table>
                     <TableHead>
                         <TableCell>
                             <Typography variant='h6'> Online</Typography>
@@ -209,7 +217,7 @@ const Priser: React.FunctionComponent = () => {
             </Box>
 
             <Box sx={{paddingBottom: '50px'}}>
-                <Table sx={{width: '80%', margin: 'auto'}}>
+                <Table>
                     <TableHead>
                         <TableCell>
                             <Typography variant='h6'> Akupunktur</Typography>
@@ -226,7 +234,7 @@ const Priser: React.FunctionComponent = () => {
             </Box>
 
             <Box sx={{paddingBottom: '50px'}}>
-                <Table sx={{width: '80%', margin: 'auto'}}>
+                <Table>
                     <TableHead>
                         <TableCell>
                             <Typography variant='h6'> Vejledning</Typography>
@@ -299,7 +307,7 @@ const Priser: React.FunctionComponent = () => {
                     </TableBody>        
                 </Table>
             </Box>
-            <Box sx={{width: "80%", margin: "auto", marginBottom: "20px", display: "flex", backgroundColor: "#A3A798", padding: "10px", borderRadius: "10px", color: "white",
+            <Box sx={{marginBottom: "20px", display: "flex", backgroundColor: "#A3A798", padding: "10px", borderRadius: "10px", color: "white",
                 tooltip:{backgroundColor: "red", color: "green"}
             }}>
                 
@@ -311,7 +319,7 @@ const Priser: React.FunctionComponent = () => {
                     <InfoOutlinedIcon fontSize='small'/>
                 </LightTooltip>
             </Box>
-            <Box sx={{width: "80%", margin: "auto"}}>
+            <Box >
                 {/* <Card>
                     <CardHeader title="Betaling"/>
                     <CardContent>
@@ -366,7 +374,7 @@ const Priser: React.FunctionComponent = () => {
                 </DialogActions>
             </Dialog> */}
             
-        </div>
+        </Box>
     );
 };
 
