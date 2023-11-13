@@ -1,3 +1,7 @@
+#spiseforstyrrelse{
+ 
+}
+
 .card {
     color: white;
     background-color: #b5ab9e;
@@ -5,8 +9,8 @@
 
   /* Mobile devices */
 @media /*(min-width: 320px) and*/ (max-width: 480px) {
-    #sf h1{
-      font-size: 20;
+    h1{
+      font-size: 20pt;
       margin-top: 60px;
     }
     
@@ -33,7 +37,7 @@
     }
   
     h1{
-      font-size: 20;
+      font-size: 30pt;
       margin-top: 60px;
     }
     /**

@@ -25,3 +25,77 @@
 #info p{
     color: white;
 }
+
+/* Mobile devices */
+@media /*(min-width: 320px) and*/ (max-width: 480px) {
+    h1{
+      font-size: 20pt;
+      margin-top: 60px;
+    }
+    
+    h3{
+      font-size: large;
+      margin: 20px 0 25px 0;
+    }
+    
+    p{
+      font-size: x-small;
+    }
+    
+    #headermenu{
+      display: none;
+    }
+    
+  }
+  
+  /* iPads, Tablets */
+  @media (min-width: 481px) and (max-width: 768px) {
+  
+    #headermenu{
+      display: none;
+    }
+  
+    h1{
+      font-size: 30pt;
+      margin-top: 60px;
+    }
+    /**
+      * Header (Dissapering -> Make a burger menu)
+      * Home (Header animation is too big -> Decrease size)
+      * Projects (Height issues maybe, Carrousel issues being too big and not centered)
+      * Projects
+      ** Map (Video being fixed size as too big, Code Section overflow to right )
+      ** All of the other (Code Section overflow to right)
+      * Education (Semester/subject blocks are fixed sizes -> try try rem instead of px, height)
+      * Contact (Padding issues between text and map)
+      */
+  }
+  
+  /* Small screens, laptops */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    #mobile-menu{
+      display: none;
+    }
+    /**
+      * Projects
+      ** Map (Video not centered, Code Section overflow to right)
+      ** All of the other (Code Section overflow to right)
+      * Education
+      */
+  }
+  
+  /* Desktops, large screens */
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    /*Everything appears to work fine*/  
+    #mobile-menu{
+      display: none;
+    }
+  }
+  
+  /* Extra large screens, TV */
+  @media (min-width: 1201px) {
+    /*Everything appears to work fine*/
+    #mobile-menu{
+      display: none;
+    }
+  }
