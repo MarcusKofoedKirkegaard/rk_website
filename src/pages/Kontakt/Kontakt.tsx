@@ -8,6 +8,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import PlaceIcon from '@mui/icons-material/Place';
+import EmailIcon from '@mui/icons-material/Email';
 
 const Kontakt: React.FunctionComponent = () => {
     
@@ -26,11 +27,9 @@ const Kontakt: React.FunctionComponent = () => {
                 <Stack>
                     <p> Tlf: <b><a href='tel:+4560155586'> +45 60 15 55 86</a></b></p>
                 </Stack>
-                <Stack>
-                    <p> Email: <b><a href='tomail:diætist@rikkekirkegaard.dk'> diætist@rikkekirkegaard.dk</a></b></p>
-                </Stack>
-                <Stack>
-                    <p>UDFYLD FORMULAR ??? (Idé) </p>
+                <Stack direction="row">
+                    <EmailIcon/>
+                    <p> Email: <b><a href='mailto:rikke.adamsen.kirkegaard@gmail.com'> rikke.adamsen.kirkegaard@gmail.com</a></b></p>
                 </Stack>
                 <Stack>
                     <p>Find mig her:</p>
