@@ -1,4 +1,4 @@
-import { Box, Stack } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import RoomIcon from '@mui/icons-material/Room';
 import './Kontakt.css';
 import React from 'react';
@@ -9,6 +9,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import PlaceIcon from '@mui/icons-material/Place';
 import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 const Kontakt: React.FunctionComponent = () => {
     
@@ -22,17 +23,24 @@ const Kontakt: React.FunctionComponent = () => {
     return (
         <Box sx={{width: "80%", margin: "auto", paddingTop: "85px"}}>
             <h1>Kontakt</h1>
-            <Box>
+            <Stack spacing={2}>
                 <p>Ønsker du at kontakte mig eller booke en samtale kan du kontakte mig på følgende vis:</p>
-                <Stack>
-                    <p> Tlf: <b><a href='tel:+4560155586'> +45 60 15 55 86</a></b></p>
+                <Stack direction="row" spacing={1}>
+                    <PhoneIcon/>
+                    <a href='tel:+4560155586'> <Typography fontFamily="inherit"> +45 60 15 55 86</Typography> </a>
                 </Stack>
-                <Stack direction="row">
+                <Stack direction="row" spacing={1}>
                     <EmailIcon/>
-                    <p> Email: <b><a href='mailto:rikke.adamsen.kirkegaard@gmail.com'> rikke.adamsen.kirkegaard@gmail.com</a></b></p>
+                    <a href='mailto:rikke.adamsen.kirkegaard@gmail.com'> <Typography fontFamily="inherit">rikke.adamsen.kirkegaard@gmail.com</Typography></a>
                 </Stack>
-                <Stack>
-                    <p>Find mig her:</p>
+                <Stack direction="row" spacing={1}>
+                    <PlaceIcon/>
+                    <Typography fontFamily="inherit" fontWeight="bold">Find mig her:</Typography> 
+                    <a target="_blank" href='https://www.google.com/maps/place/Mejlgade+44e,+8000+Aarhus/'>
+                    <Typography fontFamily="inherit">Mejlgade 44E, 2. 8000 Aarhus C</Typography>    
+                    </a>
+                </Stack>
+                    
                     <MapContainer 
                         center={location} 
                         zoom={12} 
@@ -53,8 +61,8 @@ const Kontakt: React.FunctionComponent = () => {
                         </Marker>
             
                     </MapContainer>
-                </Stack>
-            </Box>
+
+            </Stack>
 
         </Box>
         

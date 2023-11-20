@@ -23,16 +23,16 @@ const Hjem = () => {
             </Box>
             <Box sx={{width: "80%", margin: "auto"}}>
                 
-                <h2>Jeg tilbyder</h2>
+                {/* <h2>Jeg tilbyder</h2> */}
                 <Card sx={{
                     backgroundColor: ""
                 }}>
-                    hey
+                    
                     {/* <h2 style={{color: "white"}}>Jeg tilbyder...</h2> */}
                 </Card>
-                <h2>More</h2>
+                {/* <h2>More</h2> */}
                 <Card>
-                    <h2 style={{color: "white"}}>More...</h2>
+                    {/* <h2 style={{color: "white"}}>More...</h2> */}
                 </Card>
             </Box>
         </Box>
