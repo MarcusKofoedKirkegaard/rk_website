@@ -27,7 +27,7 @@ const Kontakt: React.FunctionComponent = () => {
                 <p>Ønsker du at kontakte mig eller booke en samtale kan du kontakte mig på følgende vis:</p>
                 <Stack direction="row" spacing={1}>
                     <PhoneIcon/>
-                    <a href='tel:+4560155586'> <Typography fontFamily="inherit"> +45 60 15 55 86</Typography> </a>
+                    <a href='tel:+4560155585'> <Typography fontFamily="inherit"> +45 60 15 55 85</Typography> </a>
                 </Stack>
                 <Stack direction="row" spacing={1}>
                     <EmailIcon/>
