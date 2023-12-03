@@ -53,7 +53,7 @@ const OmMig  = () => {
                             at jeg ser det hele menneske og nærer empati og nysgerrighed for den person jeg sidder overfor og møder dig der hvor du er.
                         </Typography>
                         <Box>
-                            <img src="images/small.png" alt="" width={"200px"} style={{borderRadius: "50%"}}/>
+                            <img src="images/OmMig.jpg" alt="" width={"300px"}  style={{borderRadius: "48%"}}/>
                         </Box>
                     </Stack>
                     <Box >

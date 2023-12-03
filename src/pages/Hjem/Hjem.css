@@ -25,7 +25,7 @@ p{
 }
 
 #attention{
-    background-image: url('/public/images/IMG_1780.jpg'); /* Replace 'path_to_your_image.jpg' with the actual path to your background image */
+    background-image: url('/public/images/Frontpage.jpg'); /* Replace 'path_to_your_image.jpg' with the actual path to your background image */
     background-size: cover; /* This property ensures that the background image covers the entire element */
     min-height: 500px;
     /* min-height: 500px;

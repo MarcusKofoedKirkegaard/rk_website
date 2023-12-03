@@ -1,6 +1,6 @@
 import './Hjem.css';
 import React from 'react';
-import { Button, Card, Box, Typography } from '@mui/material';
+import { Button, Card, Box, Typography, Stack } from '@mui/material';
 
 const Hjem = () => {
 
@@ -21,7 +21,14 @@ const Hjem = () => {
                     backgroundColor: 'rgba(181, 171, 158, 0.7)', '&:hover': {backgroundColor: "#b5ab9e"}}} >Kontakt mig</Button>
                 </a>
             </Box>
-            <Box sx={{width: "80%", margin: "auto"}}>
+            <Box sx={{width: "80%", margin: "auto", padding: "50px 0"}}>
+                <Stack direction="row" spacing={100}>
+                    <Card sx={{height: "200px"}}>
+
+                    </Card>
+                    <img src="images/FrontpageSmall.jpg" alt="" width={"400px"} style={{borderRadius: "5%"}}/>
+
+                </Stack>
                 
                 {/* <h2>Jeg tilbyder</h2> */}
                 <Card sx={{
