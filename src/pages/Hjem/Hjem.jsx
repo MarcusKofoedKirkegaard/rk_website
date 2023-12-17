@@ -16,7 +16,7 @@ const Hjem = () => {
                     Jeg er uddannet klinisk diætist fra Århus Universitet i 2008. Samme år er jeg autoriseret af Sundhedsstyrelsen. Min autorisation betyder, at min vejledning bygger på videnskabelig evidens. Til trods for min kliniske tilgang vil jeg fremhæve, at det ligger mig meget på sinde, at jeg ser det hele menneske og nærer empati og nysgerrighed for den person jeg sidder overfor og møder dig der hvor du er.
                 </Typography>
                 </Card>
-                <a href="mailto:rikke.kirkegaard@example.dk">
+                <a href="mailto:rikke.adamsen.kirkegaard@gmail.com">
                     <Button variant='contained' sx={{color: 'white', 
                     backgroundColor: 'rgba(181, 171, 158, 0.7)', '&:hover': {backgroundColor: "#b5ab9e"}}} >Kontakt mig</Button>
                 </a>

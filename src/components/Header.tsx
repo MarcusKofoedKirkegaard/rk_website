@@ -11,14 +11,17 @@ const Header: React.FunctionComponent = () => {
           <nav>
           <div id='headerlogo' style={{width: "50%"}}>
           <Box sx={{paddingLeft: "35px", maxWidth: "300px"}}>
-          <Link to="/" >
-            
-              <Stack>
-                  <h1 id='Logo'> <b> RIKKE KIRKEGAARD </b> </h1>       
-                  <Typography variant='h6' sx={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"}}>Autoriseret Diætist</Typography>
+            <Link to="/" >
+                <Stack>
+                    <h1 id='Logo'> 
+                      <b> RIKKE KIRKEGAARD </b> 
+                    </h1>       
+                    <Typography variant='h6' sx={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"}}>
+                      Autoriseret Klinisk Diætist
+                    </Typography>
                 </Stack>
-          </Link>
-            </Box>
+            </Link>
+          </Box>
           </div>
 
           <div id='headermenu'>

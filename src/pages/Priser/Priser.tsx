@@ -120,7 +120,7 @@ const Priser: React.FunctionComponent = () => {
                     </DialogContent>
                     <DialogActions>
                         <Button variant='outlined' onClick={() => setShowContactDialog(false)} sx={{borderColor: "#b5ab9e", color: "#b5ab9e", '&:hover': {borderColor: "#b5ab9e", backgroundColor: "#A3A798", color: "white"}}}>Ikke lige nu</Button>
-                        <Button variant="contained" href='mailto:rikkekirkegaard@example.dk' sx={{color: "white", backgroundColor: "#b5ab9e", '&:hover': {borderColor: "#b5ab9e", backgroundColor: "#A3A798", color: "white"}}}> Send Mig en mail</Button>
+                        <Button variant="contained" href='mailto:rikke.adamsen.kirkegaard@gmail.com' sx={{color: "white", backgroundColor: "#b5ab9e", '&:hover': {borderColor: "#b5ab9e", backgroundColor: "#A3A798", color: "white"}}}> Send Mig en mail</Button>
 
                     </DialogActions>
                 </Dialog>
