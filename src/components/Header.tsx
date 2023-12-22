@@ -9,8 +9,10 @@ const Header: React.FunctionComponent = () => {
   return (
     <AppBar sx={{backgroundColor: "whitesmoke"}} >
           <nav>
-          <div id='headerlogo' style={{width: "50%"}}>
-          <Box sx={{paddingLeft: "35px", maxWidth: "300px"}}>
+        
+          <div className='headerlogo' > 
+          
+          <Box className='headerlogo' sx={{ }}> 
             <Link to="/" >
                 <Stack>
                     <h1 id='Logo'> 
@@ -25,12 +27,14 @@ const Header: React.FunctionComponent = () => {
           </div>
 
           <div id='headermenu'>
+            {/* REMOVED UNTIL CONTENT IS READY
             <Link to="/forloeb" >
               <p style={{fontSize: "16pt"}}
                 className={location.pathname === '/forloeb' ? 'active' : ''}>
                 Jeg tilbyder
               </p>
-            </Link>
+            </Link> 
+            */}
             <Link to="/spiseforstyrrelse" >
               <p style={{fontSize: "16pt"}} className={location.pathname === '/spiseforstyrrelse' ? 'active' : ''}>
                 Spiseforstyrrelser

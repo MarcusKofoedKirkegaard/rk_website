@@ -25,14 +25,19 @@ p{
 }
 
 #attention{
+  position: relative;
     background-image: url('/public/images/Frontpage.jpg'); /* Replace 'path_to_your_image.jpg' with the actual path to your background image */
+    background-position: top right;
     background-size: cover; /* This property ensures that the background image covers the entire element */
-    min-height: 500px;
+    background-repeat: no-repeat;
+    height: 400px;
+    /* max-height: 800px; */
     /* min-height: 500px;
     max-height: 500px;  */
     color: #F5F5DC; /* Set the text color to contrast with the background */
     /* padding-top: 20px; */
     padding: 10px 55% 10% 50px;
+  
 }
 
 #offer{

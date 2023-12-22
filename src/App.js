@@ -29,7 +29,7 @@ function App() {
             <Route path='/kontakt' element={<Kontakt/>} />
           </Routes>
 
-        <CookieConsentComponent/>
+        {/* <CookieConsentComponent/> */}
         <MobileMenu/>
         
         </main>

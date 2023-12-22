@@ -28,26 +28,35 @@ const Kontakt: React.FunctionComponent = () => {
                 <Stack direction="row" spacing={35}>
                     <Box>
                     <h1>Kontakt</h1>
-                        <p>Ønsker du at kontakte mig eller booke en samtale kan du kontakte mig på følgende vis:</p>
-                        <Stack direction="row" spacing={1}>
-                            <PhoneIcon/>
-                            <a href='tel:+4560155585'> <Typography fontFamily="inherit"> +45 60 15 55 85</Typography> </a>
+                    <Box display="flex" flexWrap="wrap" alignItems="flex-start" justifyContent="space-between">
+                        {/* LEFT SIDE / TOP */}
+                        <Stack spacing={2} paddingBottom="40px">
+                            <Typography>Ønsker du at kontakte mig eller booke en samtale kan du kontakte mig på følgende vis:</Typography>
+                        
+                            <Stack direction="row" spacing={1}>
+                                <PhoneIcon/>
+                                <a href='tel:+4560155585'> <Typography fontFamily="inherit"> +45 60 15 55 85</Typography> </a>
+                            </Stack>
+                            <Stack direction="row" spacing={1}>
+                                <EmailIcon/>
+                                <a href='mailto:rikke.adamsen.kirkegaard@gmail.com'> <Typography fontFamily="inherit">rikke.adamsen.kirkegaard@gmail.com</Typography></a>
+                            </Stack>
+                            <Stack direction="row" spacing={1}>
+                                <PlaceIcon/>
+                                <a target="_blank" href='https://www.google.com/maps/place/Mejlgade+44e,+8000+Aarhus/'>
+                                <Typography fontFamily="inherit">Mejlgade 44E, 2. 8000 Aarhus C</Typography>    
+                                </a>
+                            </Stack>
                         </Stack>
-                        <Stack direction="row" spacing={1}>
-                            <EmailIcon/>
-                            <a href='mailto:rikke.adamsen.kirkegaard@gmail.com'> <Typography fontFamily="inherit">rikke.adamsen.kirkegaard@gmail.com</Typography></a>
-                        </Stack>
-                        <Stack direction="row" spacing={1}>
-                            <PlaceIcon/>
-                            <Typography fontFamily="inherit" fontWeight="bold">Find mig her:</Typography> 
-                            <a target="_blank" href='https://www.google.com/maps/place/Mejlgade+44e,+8000+Aarhus/'>
-                            <Typography fontFamily="inherit">Mejlgade 44E, 2. 8000 Aarhus C</Typography>    
-                            </a>
-                        </Stack>
+
+                        {/* RIGHT SIDE / BOTTOM */}
+                        {/* <Box flex="1">
+                            <img src="images/Kontakt.jpg" alt="" width={"225px"} style={{borderRadius: "5%"}}/>
+                        </Box> */}
                     </Box>
-                    <Box sx={{paddingTop: "50px"}}>
-                        <img src="images/Kontakt.jpg" alt="" width={"225px"} style={{borderRadius: "5%"}}/>
+                        
                     </Box>
+                    
                 </Stack>
                     
                 <MapContainer 

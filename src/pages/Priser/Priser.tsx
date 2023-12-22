@@ -1,6 +1,6 @@
 import './Priser.css';
 import React, { useState } from 'react';
-import { Box, Table, TableRow, TableCell, TableHead, TableBody, Typography, Card, Button, Dialog, DialogTitle, DialogContent, DialogActions, Alert, IconButton, Tooltip, Accordion, AccordionSummary, AccordionDetails, Stack, CardHeader, CardContent, Tabs, Tab, styled, TooltipProps, tooltipClasses } from '@mui/material'
+import { Box, Table, TableRow, TableCell, TableHead, TableBody, Typography, Button, Dialog, DialogTitle, DialogContent, DialogActions, Alert, IconButton, Tooltip, Accordion, AccordionSummary, AccordionDetails, Stack, CardHeader, CardContent, Tabs, Tab, styled, TooltipProps, tooltipClasses } from '@mui/material'
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import TelegramIcon from '@mui/icons-material/Telegram';
@@ -53,7 +53,9 @@ const BasicTabs: React.FunctionComponent = () =>{
         <Box sx={{ borderBottom: 1, borderColor: "divider", 
         display: "flex", justifyContent: 'space-evenly'
         }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example"
+        variant="scrollable" scrollButtons="auto"
+        >
                 <Tab sx={{marginLeft: "50px", padding: "0, 50px, 0, 50px", marginRight: "50px"}} label="Betaling" {...a11yProps(0)} />
                 <Tab sx={{marginLeft: "50px",padding: "0, 50px, 0, 50px", marginRight: "50px"}} label="Afbudsregler" {...a11yProps(1)} />
                 <Tab sx={{marginLeft: "50px", padding: "0, 50px, 0, 50px",marginRight: "50px"}} label="Tilskud" {...a11yProps(2)} />
@@ -97,6 +99,7 @@ const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
 
 const Priser: React.FunctionComponent = () => {
     const [showContactDialog, setShowContactDialog] = useState(false);
+    const [showInfoDialog, setShowInfoDialog] = useState(false);
     const [showStateRate, setShowStateRate] = useState(false);
     const [showPsykoedukation, setShowPsykoedukation] = useState(false);
     const [value, setValue] = useState(1);
@@ -122,6 +125,17 @@ const Priser: React.FunctionComponent = () => {
                         <Button variant='outlined' onClick={() => setShowContactDialog(false)} sx={{borderColor: "#b5ab9e", color: "#b5ab9e", '&:hover': {borderColor: "#b5ab9e", backgroundColor: "#A3A798", color: "white"}}}>Ikke lige nu</Button>
                         <Button variant="contained" href='mailto:rikke.adamsen.kirkegaard@gmail.com' sx={{color: "white", backgroundColor: "#b5ab9e", '&:hover': {borderColor: "#b5ab9e", backgroundColor: "#A3A798", color: "white"}}}> Send Mig en mail</Button>
 
+                    </DialogActions>
+                </Dialog>
+
+                <Dialog open={showInfoDialog}>
+                    <DialogTitle> Kørselstakst ifølge statens takster </DialogTitle>
+                    <DialogContent>
+                        Statens kørselstakst i 2023:
+                        <ul><li >3,73 kr. pr. km.</li></ul>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button variant='outlined' onClick={() => setShowInfoDialog(false)} sx={{borderColor: "#b5ab9e", color: "#b5ab9e", '&:hover': {borderColor: "#b5ab9e", backgroundColor: "#A3A798", color: "white"}}}>Luk</Button>
                     </DialogActions>
                 </Dialog>
 
@@ -307,17 +321,17 @@ const Priser: React.FunctionComponent = () => {
                     </TableBody>        
                 </Table>
             </Box>
-            <Box sx={{marginBottom: "20px", display: "flex", backgroundColor: "#A3A798", padding: "10px", borderRadius: "10px", color: "white",
-                tooltip:{backgroundColor: "red", color: "green"}
-            }}>
-                
-                <Typography sx={{color: "white", paddingRight: "5px"}}> Kørselstakst ifølge statens takster</Typography>
-                <LightTooltip title={<Typography sx={{fontSize: "12pt", color: "white", padding: "15px"}} >
+            <Box paddingBottom="40px">
+                <Button sx={{backgroundColor: "#A3A798"}} onClick={() => setShowInfoDialog(true)}>
+                    <Typography fontSize={14} sx={{color: "white"}}> Kørselstakst ifølge statens takster</Typography>
+                </Button>
+            
+                {/* <LightTooltip title={<Typography sx={{fontSize: "12pt", color: "white", padding: "15px"}} >
                 Statens kørselstakst i 2023:
                    <ul style={{margin: "0"}}>  <li >3,73 kr. pr. km.</li></ul>
                 </Typography>} placement='top' arrow >
                     <InfoOutlinedIcon fontSize='small'/>
-                </LightTooltip>
+                </LightTooltip> */}
             </Box>
             <Box >
                 {/* <Card>

@@ -8,11 +8,11 @@
     box-shadow: inset;
 }
 
-nav {
+/* nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
+} */
 
 #hederlogo{
     justify-content: left;

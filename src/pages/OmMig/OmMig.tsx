@@ -20,19 +20,20 @@ const udtalelse1 = () => {
     return myArray;
 }
 
-const StyledCard: React.FunctionComponent<{title: string, text: string[]}> = ({title, text}) =>{
+const StyledCard: React.FunctionComponent<{title: string, text: string}> = ({title, text}) =>{
     return (
         <Card sx={{padding: "20px", marginBottom: "50px", 
-                    backgroundColor: "#b5ab9e", minHeight: "100px", margin: "auto", "&:hover":{
+                    backgroundColor: "#b5ab9e", minWidth: "250px",maxWidth: "500px", minHeight: "100px", margin: "auto", "&:hover":{
                         transform: "scale(1.01)"}, transition: "transform 0.3s ease-in-out"
                     }} >
             <Box sx={{margin: "20px"}}>
-                <Typography fontFamily="inherit" fontSize="15pt" style={{color: "white"}}>{title}</Typography>            
-                {text.map(segment => {
+                <Typography paddingBottom="20px" fontFamily="inherit" fontSize="15pt" style={{color: "white"}}>{title}</Typography>            
+                <Typography sx={{ whiteSpace: 'pre-wrap' }} color="white" fontFamily="inherit">{text}</Typography>
+                {/* {text.map(segment => {
                     return(
                         <Typography fontFamily="inherit" fontStyle="italic" sx={{color: "white"}}>{segment}</Typography>
                     );
-                })}  
+                })}   */}
             </Box>
         </Card>
     );
@@ -45,37 +46,57 @@ const OmMig  = () => {
                 <div >
                     <h1>Hvem er jeg?</h1>
                     
-                    <Stack direction="row" spacing={5} sx={{marginBottom: "50px"}}>
-                        <Typography fontFamily="inherit" fontSize="14pt">
-                            Jeg er uddannet klinisk diætist fra Århus Universitet i 2008. Samme år er jeg autoriseret af Sundhedsstyrelsen. 
-                            Min autorisation betyder, at min vejledning bygger på videnskabelig evidens. 
-                            Til trods for min kliniske tilgang vil jeg fremhæve, at det ligger mig meget på sinde, 
-                            at jeg ser det hele menneske og nærer empati og nysgerrighed for den person jeg sidder overfor og møder dig der hvor du er.
-                        </Typography>
-                        <Box>
+                    <Box display="flex" justifyContent="space-between" alignItems="flex-start" flexWrap="wrap" sx={{marginBottom: "50px"}}>
+                        <Box paddingBottom="40px" maxWidth="800px">
+                            <Typography fontFamily="inherit" fontSize="14pt">
+                                Jeg er uddannet klinisk diætist fra Århus Universitet i 2008. Samme år er jeg autoriseret af Sundhedsstyrelsen. 
+                                Min autorisation betyder, at min vejledning bygger på videnskabelig evidens. 
+                                Til trods for min kliniske tilgang vil jeg fremhæve, at det ligger mig meget på sinde, 
+                                at jeg ser det hele menneske og nærer empati og nysgerrighed for den person jeg sidder overfor og møder dig der hvor du er.
+                            </Typography>
+                        </Box>
+                        <Box flex="1" paddingLeft="20px">
                             <img src="images/OmMig.jpg" alt="" width={"300px"}  style={{borderRadius: "48%"}}/>
                         </Box>
-                    </Stack>
+                    </Box>
+
+
                     <Box >
                         <Card  sx={{color: "white", padding: "20px", backgroundColor: "#b5ab9e"}}>
                             <Typography fontFamily="inherit" variant='h4' >Kvalifikationer</Typography>
-                            <p>...</p>
-                            
+                            <ul>
+                            <li>Autoriseret Klinisk Diætist - 2008</li>
+                            <li>Spinning Instruktør </li>
+                            <li>GPU Gruppe Terapeutisk Uddannelse </li>
+                            <li>Strong Uddannelse</li>
+                            <li>Yoga Instruktør - 2023</li>
+                            </ul>
                             <Typography fontFamily="inherit" variant='h4'>Speciale</Typography>
-                            <p>...</p>
-
+                            <ul>
+                            <li>Spiseforstyrrelser
+                                <ul>
+                                <li>Anoreksi</li>
+                                <li>Bulemi</li>
+                                <li>BED</li>
+                                </ul>
+                            </li>
+                            </ul>
                             <Typography fontFamily="inherit" variant='h4'>Erfaring</Typography>
-                            <p>...</p>
-
+                            <ul>
+                                <li>Livstilssygdomme v. Randers Regions Hospital - 2008</li>
+                                <li>Spiseforstyrrelser v. Klinik for Spiseforstyrrelse Herning - 2008 - 2019</li>
+                                <li>Familier, spiseforstyrrelse og selvskade v. FOSS - 2019 - 2024</li>
+                            </ul>
                         </Card>
                     </Box>
                 </div>
 
                 <Box sx={{marginBottom: "50px", marginTop: "50px"}}>
-                    <Typography fontFamily="inherit" variant='h4'>Andre siger:</Typography>
+                    <Typography sx={{paddingBottom: "20px"}} fontFamily="inherit" variant='h4'>Andre siger:</Typography>
                     <Tabs variant="scrollable" >       
                         <ListItem>
-                             <StyledCard title="Emilia, 29" text={udtalelse1()}/>       
+                             <StyledCard title="Emilia, 29" text="I mit forløb med Rikke har hun gjort sig umage for at lære mig at kende og forstå, hvor jeg er i livet. Jeg er blevet mødt i øjenhøjde, og Rikke har ikke bare forholdt sig til, hvad jeg putter på min tallerken, men har set hele mig og haft min trivsel på hjertet. I mit tempo har Rikke hjulpet mig med både kost, motion og kropsbillede. 
+                             Forløbet har været guld værd for mig, og Rikkes tålmodighed og støtte vejen har betydet alt."/>       
                         </ListItem> 
                         <ListItem>
                             {/* <StyledCard title="Udtalelse 2 - Navn" text="Jeg har været i forløb med Rikke, hvilket..."/> */}

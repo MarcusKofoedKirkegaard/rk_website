@@ -1,3 +1,4 @@
+import { Stack } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
 import "./MobileMenu.css"; // Import your CSS file for styling
 import { Link } from "react-router-dom";
@@ -39,26 +40,30 @@ function MobileMenu() {
         Menu
       </button>
       <nav className="menu-content">
-        <ul>
+        <Stack spacing={4} paddingLeft="10px" paddingRight="10px">
+          <div></div>
           <Link to="/" onClick={closeMenu}>
-            <li>Home</li>
+            Home
           </Link>
+          {/* REMOVED FROM SITE UNTIL CONTENT IS READY 
           <Link to="/forloeb" onClick={closeMenu}>
             <li>Forløb</li>
-          </Link>
+          </Link> 
+          */}
           <Link to="/spiseforstyrrelse" onClick={closeMenu}>
-            <li>Spiseforstyrrelse</li>
+            Spiseforstyrrelse
           </Link>
           <Link to="/om-mig" onClick={closeMenu}>
-            <li>Om mig</li>
+            Om mig
           </Link>
           <Link to="/priser" onClick={closeMenu}>
-            <li>Priser</li>
+            Priser
           </Link>
           <Link to="/kontakt" onClick={closeMenu}>
-            <li>Kontakt</li>
+            Kontakt
           </Link>
-        </ul>
+          <div></div>
+        </Stack>
       </nav>
     </div>
   );
