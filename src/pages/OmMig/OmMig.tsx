@@ -1,6 +1,7 @@
 import { Box, Card, List, ListItem, Stack, Tab, Tabs, Typography } from '@mui/material';
 import './OmMig.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -86,6 +87,19 @@ const OmMig  = () => {
                                 <li>Livstilssygdomme v. Regionshospitalet Randers - 2008</li>
                                 <li>Spiseforstyrrelser v. Klinik for Spiseforstyrrelser Herning - 2008 - 2019</li>
                                 <li>Familier, spiseforstyrrelse og selvskade v. FOSS - 2019 - 2024</li>
+                            </ul>
+                            <Typography fontFamily="inherit" variant='h4'>Samarbejdspartnere</Typography>
+                            <ul>
+                                <li>
+                                <Link to="https://www.dortheamby.dk" > 
+                                   <Typography fontFamily="inherit" color="white"> Autoriseret Psykolog - Dorthe Amby</Typography>
+                                </Link>
+                                </li>
+                                <li>
+                                <Link to="https://mental-care.dk" > 
+                                   <Typography fontFamily="inherit" color="white"> Mental-Care - Vikarservice i Socialpsykiatrien</Typography>
+                                </Link>
+                                </li>
                             </ul>
                         </Card>
                     </Box>

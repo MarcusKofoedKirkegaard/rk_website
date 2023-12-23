@@ -72,14 +72,6 @@ const Hjem = () => {
                 </Card> 
                 */}
             </Box>
-            <Stack direction="row" spacing={2}>
-                
-                <Link to="https://www.dortheamby.dk"> 
-                    Autoriseret Psykolog - Dorthe Amby
-                </Link>
-                
-            </Stack>
-
         </Box>
         </div>
     );
