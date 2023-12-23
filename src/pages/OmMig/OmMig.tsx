@@ -70,7 +70,7 @@ const OmMig  = () => {
                                     <li>Autoriseret Klinisk Diætist</li>
                                     <li>GPU Gruppe Terapeutisk Uddannelse </li>
                                     <li>Kostvejleder med speciale i det varige vægttab v. Træningsfysiolog Henrik Duer & Diætist Stine Junge Albrechstsen</li>
-                                    <li>NADA udøver</li>
+                                    <li>NADA-udøver</li>
                                     <li>Spinning Instruktør </li>
                                     <li>Strong Uddannelse</li>
                                     <li>Yoga Instruktør</li>
