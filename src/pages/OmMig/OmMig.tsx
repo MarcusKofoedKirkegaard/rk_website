@@ -66,40 +66,49 @@ const OmMig  = () => {
                         <Card  sx={{color: "white", padding: "20px", backgroundColor: "#b5ab9e"}}>
                             <Typography fontFamily="inherit" variant='h4' >Kvalifikationer</Typography>
                             <ul>
-                            <li>Autoriseret Klinisk Diætist</li>
-                            <li>GPU Gruppe Terapeutisk Uddannelse </li>
-                            <li>Spinning Instruktør </li>
-                            <li>Strong Uddannelse</li>
-                            <li>Yoga Instruktør</li>
+                                <Stack spacing={2}>
+                                    <li>Autoriseret Klinisk Diætist</li>
+                                    <li>GPU Gruppe Terapeutisk Uddannelse </li>
+                                    <li>Kostvejleder med speciale i det varige vægttab v. Træningsfysiolog Henrik Duer & Diætist Stine Junge Albrechstsen</li>
+                                    <li>Spinning Instruktør </li>
+                                    <li>Strong Uddannelse</li>
+                                    <li>Yoga Instruktør</li>
+                                </Stack>
                             </ul>
                             <Typography fontFamily="inherit" variant='h4'>Speciale</Typography>
                             <ul>
                             <li>Spiseforstyrrelser
                                 <ul>
-                                <li>Anoreksi</li>
-                                <li>Bulimi</li>
-                                <li>BED (Tvangsoverspisning)</li>
+                                    <Stack spacing={2}>
+                                        <li>Anoreksi</li>
+                                        <li>Bulimi</li>
+                                        <li>BED (Tvangsoverspisning)</li>
+                                    </Stack>
                                 </ul>
                             </li>
                             </ul>
                             <Typography fontFamily="inherit" variant='h4'>Erfaring</Typography>
                             <ul>
-                                <li>Livstilssygdomme v. Regionshospitalet Randers - 2008</li>
-                                <li>Spiseforstyrrelser v. Klinik for Spiseforstyrrelser Herning - 2008 - 2019</li>
-                                <li>Familier, spiseforstyrrelse og selvskade v. FOSS - 2019 - 2024</li>
+                                <Stack spacing={2}>
+                                    <li>Livstilssygdomme v. Regionshospitalet Randers - 2008</li>
+                                    <li>Spiseforstyrrelser v. Klinik for Spiseforstyrrelser Herning - 2008 - 2019</li>
+                                    <li>Familier, spiseforstyrrelse og selvskade v. FOSS - 2019 - 2024</li>
+                                </Stack>
                             </ul>
                             <Typography fontFamily="inherit" variant='h4'>Samarbejdspartnere</Typography>
                             <ul>
-                                <li>
-                                <Link to="https://www.dortheamby.dk" > 
-                                   <Typography fontFamily="inherit" color="white"> Autoriseret Psykolog - Dorthe Amby</Typography>
-                                </Link>
-                                </li>
-                                <li>
-                                <Link to="https://mental-care.dk" > 
-                                   <Typography fontFamily="inherit" color="white"> Mental-Care - Vikarservice i Socialpsykiatrien</Typography>
-                                </Link>
-                                </li>
+                                <Stack spacing={2}>
+                                    <li>
+                                        <Link to="https://www.dortheamby.dk" > 
+                                            <Typography fontFamily="inherit" color="white"> Autoriseret Psykolog - Dorthe Amby</Typography>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="https://mental-care.dk" > 
+                                            <Typography fontFamily="inherit" color="white"> Mental-Care - Vikarservice i Socialpsykiatrien</Typography>
+                                        </Link>
+                                    </li>
+                                </Stack>
                             </ul>
                         </Card>
                     </Box>

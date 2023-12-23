@@ -15,8 +15,8 @@ const Hjem = () => {
             <div className='overlay'></div>        
                     <div className="attentionContent" >
                     <Stack spacing={3} padding={1} marginTop={10} width="100%" > 
-                    <Typography variant='h2' color="black" >Rikke Adamsen Kirkegaard <small></small></Typography>
-                    <Box>
+                    <Typography variant='h2' color="black" >Rikke Kirkegaard <small></small></Typography>
+                    <Box >
                     <Typography variant='h5' color="white">Autoriseret Klinisk Diætist</Typography>
                     <Typography variant='h5' color="white">& Familiebehandler</Typography>
                     </Box>
