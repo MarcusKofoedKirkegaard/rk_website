@@ -10,6 +10,8 @@ import 'leaflet/dist/leaflet.css';
 import PlaceIcon from '@mui/icons-material/Place';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Kontakt: React.FunctionComponent = () => {
     
@@ -24,7 +26,6 @@ const Kontakt: React.FunctionComponent = () => {
         <Box sx={{width: "80%", margin: "auto", paddingTop: "85px"}}>
             
             <Stack spacing={2}>
-                
                 <Stack direction="row" spacing={35}>
                     <Box>
                     <h1>Kontakt</h1>
@@ -40,6 +41,14 @@ const Kontakt: React.FunctionComponent = () => {
                             <Stack direction="row" spacing={1}>
                                 <EmailIcon/>
                                 <a href='mailto:rikke.adamsen.kirkegaard@gmail.com'> <Typography fontFamily="inherit">rikke.adamsen.kirkegaard@gmail.com</Typography></a>
+                            </Stack>
+                            <Stack direction="row" spacing={1}>
+                                <FacebookIcon/>
+                                <a href='https://www.facebook.com/profile.php?id=61551933941481'> <Typography fontFamily="inherit">Rikke Kirkegaard - Klinisk diætist</Typography></a>
+                            </Stack>
+                            <Stack direction="row" spacing={1}>
+                                <InstagramIcon/>
+                                <a href='https://www.instagram.com/rksundhedibevaegelse?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA=='> <Typography fontFamily="inherit">rksundhedibevaegelse</Typography></a>
                             </Stack>
                             <Stack direction="row" spacing={1}>
                                 <PlaceIcon/>
