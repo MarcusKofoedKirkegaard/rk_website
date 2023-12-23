@@ -13,7 +13,7 @@ const Hjem = () => {
         
             <Box id='attention'>
             <div className='overlay'></div>        
-                    <div className="attentionContent" >
+                    <div className="attentionContent" style={{paddingLeft: "100px"}} >
                     <Stack spacing={3} padding={1} marginTop={10} width="100%" > 
                     <Typography variant='h2' color="black" >Rikke Kirkegaard <small></small></Typography>
                     <Box >

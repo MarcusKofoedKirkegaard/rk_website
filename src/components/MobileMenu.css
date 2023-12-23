@@ -9,7 +9,8 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: rgba(181, 171, 158, 0.8);
+    background-color: rgb(163, 167, 152);
+    /* rgba(181, 171, 158, 0.8); */
     color: #ffffff;
     border: none;
     cursor: pointer;

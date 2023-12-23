@@ -43,7 +43,7 @@ function MobileMenu() {
         <Stack spacing={4} paddingLeft="10px" paddingRight="10px">
           <div></div>
           <Link to="/" onClick={closeMenu}>
-            Home
+            Hjem
           </Link>
           {/* REMOVED FROM SITE UNTIL CONTENT IS READY 
           <Link to="/forloeb" onClick={closeMenu}>

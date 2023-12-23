@@ -49,12 +49,23 @@ const OmMig  = () => {
                     
                     <Box display="flex" justifyContent="space-between" alignItems="flex-start" flexWrap="wrap" sx={{marginBottom: "50px"}}>
                         <Box paddingBottom="40px" maxWidth="800px">
-                            <Typography fontFamily="inherit" fontSize="14pt">
-                                Jeg er uddannet klinisk diætist fra Århus Universitet i 2008. Samme år er jeg autoriseret af Sundhedsstyrelsen. 
-                                Min autorisation betyder, at min vejledning bygger på videnskabelig evidens. 
-                                Til trods for min kliniske tilgang vil jeg fremhæve, at det ligger mig meget på sinde, 
-                                at jeg ser det hele menneske og nærer empati og nysgerrighed for den person jeg sidder overfor og møder dig der hvor du er.
-                            </Typography>
+                            <Stack spacing={2}>
+                                <Typography fontFamily="inherit" fontSize="14pt">
+                                    Jeg er uddannet klinisk diætist fra Århus Universitet i 2008. Samme år er jeg autoriseret af Sundhedsstyrelsen. 
+                                    Min autorisation betyder, at min vejledning bygger på videnskabelig evidens. 
+                                    Til trods for min kliniske tilgang vil jeg fremhæve, at det ligger mig meget på sinde, 
+                                    at jeg ser det hele menneske og nærer empati og nysgerrighed for den person jeg sidder overfor og møder dig der hvor du er.
+                                </Typography>
+                                <Typography fontFamily="inherit" fontSize="14pt">
+                                    Min brede erfaring som klinisk diætist er etableret hos Klinik for spiseforstyrrelser i ambulatoriet i Herning (2008-2019). Her har jeg primært arbejdet med den diætetiske behandling af både børn og voksne, men har også indgået i terapeutiske gruppeforløb i behandlingen af bulimi og BED samt miljøterapi i daghospitalet og måltidstræning i grupper. Når en spiseforstyrrelse ”flytter” ind påvirker det hele familien og de pårørende omkring den spiseforstyrrede. Siden november 2019 og frem til marts 2024 har jeg arbejdet ved FOSS. FOSS (forkortelse for familier med spiseforstyrrelser og selvskade) er et ambulant tilbud under Holmstrupgård (Region Midt). Her har jeg arbejdet som familiebehandler og arbejdet både med unge med en spiseforstyrrelse eller forældrene til den unge med en spiseforstyrrelse. Ind i dette har de individuelle samtaler været kombineret med familiesamtaler og herunder også søskendesamtaler. Derudover har jeg haft ungegruppe, hvor unge med udfordringer indenfor spiseforstyrrelser, selvskade, mistrivsel, autisme, ADD/ADHD, lavt selvværd mm. har kunne møde andre unge og dele tanker og spejle sig i hinanden.
+                                </Typography>
+                                <Typography fontFamily="inherit" fontSize="14pt">
+                                    Det er min klare forståelse, at en spiseforstyrrelse ikke er noget man vælger, men er en psykiatrisk lidelse, som oftest bliver et symptom og en måde at mestre svære tanker og følelser.
+                                </Typography>
+                                <Typography fontFamily="inherit" fontSize="14pt">
+                                    Forud for mine 15 års arbejde med speciale i spiseforstyrrelser har jeg arbejdet i somatikken, hvor mine primære opgaver var diætbehanling til patienter med hjerte og kar, diabetes og kvinder der var eller skulle i fertilitets behandling. Herunder har jeg bred erfaring med vægttabsbehandling og vægtvedligeholdelse. Hertil kommer nyeste uddannelse i varigt vægttab ved Henrik Duer.
+                                </Typography>
+                            </Stack>
                         </Box>
                         <Box flex="1" paddingLeft="20px">
                             <img src="images/OmMig.jpg" alt="" width={"300px"}  style={{borderRadius: "48%"}}/>
