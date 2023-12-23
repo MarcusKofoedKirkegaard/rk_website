@@ -66,8 +66,8 @@ const OmMig  = () => {
                             <Typography fontFamily="inherit" variant='h4' >Kvalifikationer</Typography>
                             <ul>
                             <li>Autoriseret Klinisk Diætist - 2008</li>
-                            <li>Spinning Instruktør </li>
                             <li>GPU Gruppe Terapeutisk Uddannelse </li>
+                            <li>Spinning Instruktør </li>
                             <li>Strong Uddannelse</li>
                             <li>Yoga Instruktør - 2023</li>
                             </ul>
@@ -77,7 +77,7 @@ const OmMig  = () => {
                                 <ul>
                                 <li>Anoreksi</li>
                                 <li>Bulemi</li>
-                                <li>BED</li>
+                                <li>BED (Tvangsoverspisning)</li>
                                 </ul>
                             </li>
                             </ul>

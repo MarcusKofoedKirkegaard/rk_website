@@ -1,6 +1,7 @@
 import './Hjem.css';
 import React from 'react';
 import { Button, Card, Box, Typography, Stack } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Hjem = () => {
 
@@ -15,7 +16,11 @@ const Hjem = () => {
                     <div className="attentionContent" >
                     <Stack spacing={3} padding={1} marginTop={10} width="100%" > 
                     <Typography variant='h2' color="black" >Rikke Adamsen Kirkegaard <small></small></Typography>
+                    <Box>
                     <Typography variant='h5' color="white">Autoriseret Klinisk Diætist</Typography>
+                    <Typography variant='h5' color="white">& Familiebehandler</Typography>
+                    </Box>
+                    
                     {/* <Card sx={{backgroundColor: 'rgba(181, 171, 158, 0.75)', padding: "10px", marginBottom: "10px", minWidth: "300px"}}>
                     <Typography style={{paddingBottom: '20px', color: "white"}}
                     >
@@ -24,7 +29,9 @@ const Hjem = () => {
                     </Card> */}
                     <a href="mailto:rikke.adamsen.kirkegaard@gmail.com">
                         <Button variant='contained' sx={{color: 'white', 
-                        backgroundColor: 'rgba(181, 171, 158, 0.7)', '&:hover': {backgroundColor: "#b5ab9e"}}} >Kontakt mig</Button>
+                        backgroundColor: 'rgba(181, 171, 158, 0.7)', '&:hover': {backgroundColor: "#b5ab9e"}}} >
+                            Kontakt mig
+                        </Button>
                     </a>
                     </Stack>
                     </div>
@@ -65,6 +72,14 @@ const Hjem = () => {
                 </Card> 
                 */}
             </Box>
+            <Stack direction="row" spacing={2}>
+                
+                <Link to="https://www.dortheamby.dk"> 
+                    Autoriseret Psykolog - Dorthe Amby
+                </Link>
+                
+            </Stack>
+
         </Box>
         </div>
     );
