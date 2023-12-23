@@ -65,26 +65,26 @@ const OmMig  = () => {
                         <Card  sx={{color: "white", padding: "20px", backgroundColor: "#b5ab9e"}}>
                             <Typography fontFamily="inherit" variant='h4' >Kvalifikationer</Typography>
                             <ul>
-                            <li>Autoriseret Klinisk Diætist - 2008</li>
+                            <li>Autoriseret Klinisk Diætist</li>
                             <li>GPU Gruppe Terapeutisk Uddannelse </li>
                             <li>Spinning Instruktør </li>
                             <li>Strong Uddannelse</li>
-                            <li>Yoga Instruktør - 2023</li>
+                            <li>Yoga Instruktør</li>
                             </ul>
                             <Typography fontFamily="inherit" variant='h4'>Speciale</Typography>
                             <ul>
                             <li>Spiseforstyrrelser
                                 <ul>
                                 <li>Anoreksi</li>
-                                <li>Bulemi</li>
+                                <li>Bulimi</li>
                                 <li>BED (Tvangsoverspisning)</li>
                                 </ul>
                             </li>
                             </ul>
                             <Typography fontFamily="inherit" variant='h4'>Erfaring</Typography>
                             <ul>
-                                <li>Livstilssygdomme v. Randers Regions Hospital - 2008</li>
-                                <li>Spiseforstyrrelser v. Klinik for Spiseforstyrrelse Herning - 2008 - 2019</li>
+                                <li>Livstilssygdomme v. Regionshospitalet Randers - 2008</li>
+                                <li>Spiseforstyrrelser v. Klinik for Spiseforstyrrelser Herning - 2008 - 2019</li>
                                 <li>Familier, spiseforstyrrelse og selvskade v. FOSS - 2019 - 2024</li>
                             </ul>
                         </Card>

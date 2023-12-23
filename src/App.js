@@ -12,11 +12,11 @@ import CookieConsentComponent from './components/Cookies.tsx';
 
 
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, HashRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <Router basename="/">
+    <HashRouter basename="/">
       <div className='App'>
         <Header/>
         <main className='content'>
@@ -38,7 +38,7 @@ function App() {
           <p style={{margin: "2px"}}>Made by Marcus Kofoed Kirkegaard |  Copyright © 2023</p>
         </div>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
