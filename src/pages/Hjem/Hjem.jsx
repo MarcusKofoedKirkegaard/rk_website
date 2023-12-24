@@ -13,12 +13,12 @@ const Hjem = () => {
         
             <Box id='attention'>
             <div className='overlay'></div>        
-                    <div className="attentionContent" style={{paddingLeft: "100px"}} >
+                    <div className="attentionContent"  >
                     <Stack spacing={3} padding={1} marginTop={10} width="100%" > 
-                    <Typography variant='h2' color="black" >Rikke Kirkegaard <small></small></Typography>
+                    <Typography className='attentionElements' variant='h2' color="black" >Rikke Kirkegaard <small></small></Typography>
                     <Box >
-                    <Typography variant='h5' color="white">Autoriseret Klinisk Diætist</Typography>
-                    <Typography variant='h5' color="white">& Familiebehandler</Typography>
+                    <Typography className='attentionElements' variant='h5' color="white">Autoriseret Klinisk Diætist</Typography>
+                    <Typography  className='attentionElements' variant='h5' color="white">& Familiebehandler</Typography>
                     </Box>
                     
                     {/* <Card sx={{backgroundColor: 'rgba(181, 171, 158, 0.75)', padding: "10px", marginBottom: "10px", minWidth: "300px"}}>
@@ -27,7 +27,7 @@ const Hjem = () => {
                         Jeg er uddannet klinisk diætist fra Århus Universitet i 2008. Samme år er jeg autoriseret af Sundhedsstyrelsen. Min autorisation betyder, at min vejledning bygger på videnskabelig evidens. Til trods for min kliniske tilgang vil jeg fremhæve, at det ligger mig meget på sinde, at jeg ser det hele menneske og nærer empati og nysgerrighed for den person jeg sidder overfor og møder dig der hvor du er.
                     </Typography>
                     </Card> */}
-                    <a href="mailto:rikke.adamsen.kirkegaard@gmail.com">
+                    <a className='attentionElements'  href="mailto:rikke.adamsen.kirkegaard@gmail.com">
                         <Button variant='contained' sx={{color: 'white', 
                         backgroundColor: 'rgba(181, 171, 158, 0.7)', '&:hover': {backgroundColor: "#b5ab9e"}}} >
                             Kontakt mig

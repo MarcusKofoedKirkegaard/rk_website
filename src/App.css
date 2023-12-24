@@ -135,6 +135,7 @@ Media Querries
   position: relative;  
   color: rgb(245, 245, 220);
   z-index: 1; 
+  padding-left: 0;
 }
   
 }
@@ -176,16 +177,26 @@ Media Querries
     display: none;
   }
 
-  /**
-    * Header (Dissapering -> Make a burger menu)
-    * Home (Header animation is too big -> Decrease size)
-    * Projects (Height issues maybe, Carrousel issues being too big and not centered)
-    * Projects
-    ** Map (Video being fixed size as too big, Code Section overflow to right )
-    ** All of the other (Code Section overflow to right)
-    * Education (Semester/subject blocks are fixed sizes -> try try rem instead of px, height)
-    * Contact (Padding issues between text and map)
-    */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(181, 171, 158, 0.8); /* Adjust the last value for transparency */
+    z-index: 0; 
+  }
+
+  #attention {
+    min-height: 500px;
+  }
+
+  .attentionContent {
+    position: relative;  
+    color: rgb(245, 245, 220);
+    z-index: 1; 
+    padding-left: 0;
+}
 }
 
 /* Small screens, laptops */
@@ -223,27 +234,22 @@ Media Querries
   #headermenu{
     display: none;
   }
-  /**
-    * Projects
-    ** Map (Video not centered, Code Section overflow to right)
-    ** All of the other (Code Section overflow to right)
-    * Education
-    */
 }
 
 /* Desktops, large screens */
-@media (min-width: 1025px) and (max-width: 1200px) {
+/* and (max-width: 1200px) */
+@media (min-width: 1025px)  { 
   /*Everything appears to work fine*/  
   #mobile-menu{
     display: none;
   }
 
   nav{
-    background-color: red;
+    
     display: flex;
     justify-content: space-around;
     align-items: center;
-  } 
+  }   
 }
 
 /* Extra large screens, TV */
@@ -260,6 +266,10 @@ Media Querries
     justify-content: space-around;
     align-items: center;
   } 
+
+  .attentionElements{
+    padding-Left: 20%;  
+  }
 }
 
 
