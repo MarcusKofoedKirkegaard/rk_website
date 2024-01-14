@@ -147,28 +147,35 @@ const Priser: React.FunctionComponent = () => {
                     </Button>
                 </Typography>
                 {/* </Card> */}
+
+                <Typography gutterBottom>
+                    Som autoriseret klinisk diætist tilbyder jeg både individuelle diætistsessioner,personligt tilpassede kostvejledningsforløb, samt akupunkturbehandlinger,spisevejledning og spisestøtte. 
+                </Typography>
+                <Typography gutterBottom>
+                    Her på siden finder du priser på personlig kostvejledning skræddersyet dine behov. Jeg tilbyder både ansigt-til-ansigt samtaler i Aarhus C samt online diætistsamtaler, som giver dig fleksibiliteten til at modtage professionel diætistvejledning uanset hvor du befinder dig. 
+                </Typography>
                 <Table>
                     <TableHead>
                         <TableCell>
-                            <Typography variant='h6'>Samtaler </Typography>
+                            <Typography variant='h6'>Individuelle samtaler</Typography>
                         </TableCell>
                     </TableHead>
                     <TableBody>
                         <TableRow>
-                            <TableCell align='left'> Opstartskonsultation (90 min)</TableCell>
+                            <TableCell align='left'> Opstartssamtale (90 min)</TableCell>
                             <TableCell align='right'> kr.   1.050,00</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell align='left'>Opstartskonsultation (90 min) + kostplan</TableCell>
+                            <TableCell align='left'>Opstartssamtale (90 min) inkl. udarbejdelse af individuel kostplan</TableCell>
                             <TableCell align='right'>kr.   1.450,00</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell align='left'>Opfølgningssamtale (60 min)</TableCell>
-                            <TableCell align='right'> kr.   800,00</TableCell>
+                            <TableCell align='right'> kr.   850,00</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell align='left'>Opfølgningssamtale (60 min) + tilpasning af kostplan</TableCell>
-                            <TableCell align='right'>kr.   900,00</TableCell>
+                            <TableCell align='left'>Tilkøb af individuel kostplan</TableCell>
+                            <TableCell align='right'>kr.   500,00</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>
@@ -178,25 +185,13 @@ const Priser: React.FunctionComponent = () => {
                 <Table>
                     <TableHead>
                         <TableCell>
-                            <Typography variant='h6'>Forløb</Typography>
+                            <Typography variant='h6'>Klippekort</Typography>
                         </TableCell>        
                     </TableHead>
                     <TableBody>
                         <TableRow>
-                            <TableCell align='left'>Opstartskonsultation inkl. 1 x opfølgning </TableCell>
-                            <TableCell align='right'>kr.   1.750,00</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell align='left'> Opstartskonsultation + kostplan + 1 x opfølgningssamtale</TableCell>
-                            <TableCell align='right'> kr.   2.200,00</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell align='left'>3 x opfølgningssamtale </TableCell>
-                            <TableCell align='right'> kr.   2.200,00</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell align='left'>3 x opfølgningssamtale + tilpasning af kostplan</TableCell>
-                            <TableCell align='right'>kr.    2.500,00</TableCell>
+                            <TableCell align='left'>3x opfølgningssamtaler </TableCell>
+                            <TableCell align='right'>kr.   2.400,00</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>
@@ -206,15 +201,41 @@ const Priser: React.FunctionComponent = () => {
                 <Table>
                     <TableHead>
                         <TableCell>
-                            <Typography variant='h6'> Online</Typography>
+                            <Typography variant='h6'> Personlig Forløb</Typography>
                         </TableCell>
                     </TableHead>
                     <TableBody>
                         <TableRow>
-                            <TableCell align='left'> Opfølgningssamtale online (60 min) </TableCell>
-                            <TableCell align='right'> kr.   800,00</TableCell>
+                        <TableCell align='left' >
+                                <Accordion 
+                                    disableGutters
+                                    elevation={0}
+                                    sx={{
+                                        '&:before': {
+                                        display: 'none',
+                                        }, 
+                                        paddingLeft: "0px"
+                                    }}
+                                >
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                        sx={{paddingLeft: "0px"}}
+                                    >
+                                        Månedligt forløb
+                                    </AccordionSummary>
+                                    <AccordionDetails >   
+                                        <i>
+                                        2 samtaler pr. måned inkl. kontakt efter behov med svar indenfor 48 timer 2000 pr. måned
+                                        (Minimum 3 måneder)
+                                        </i>
+                                    </AccordionDetails>
+                                </Accordion>
+                            </TableCell>
+                            <TableCell align='right'>kr. 2.000,00 pr. måned</TableCell>
                         </TableRow>
-                        <TableRow>
+                        {/* <TableRow>
                             <TableCell align='left'>Opfølgningssamtale online (60 min) + tilpasning af kostplan</TableCell>
                             <TableCell align='right'>kr.   900,00</TableCell>
                         </TableRow>
@@ -225,7 +246,7 @@ const Priser: React.FunctionComponent = () => {
                         <TableRow>
                             <TableCell align='left'>3 x opfølgningssamtale online + tilpasning af kostplan</TableCell>
                             <TableCell align='right'>kr.    2.500,00</TableCell>
-                        </TableRow>
+                        </TableRow> */}
                     </TableBody>        
                 </Table>
             </Box>
