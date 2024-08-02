@@ -26,7 +26,7 @@ p{
 
 #attention{
   position: relative;
-    background-image: url('/public/images/Frontpage.jpg'); /* Replace 'path_to_your_image.jpg' with the actual path to your background image */
+    background-image: url('/public/images/Frontpage.jpg'); /* alt("Rikke Kirkegaard Diætist Aarhus C Spiseforstyrrelse"); /* Replace 'path_to_your_image.jpg' with the actual path to your background image */
     background-position: top right;
     background-size: cover; /* This property ensures that the background image covers the entire element */
     background-repeat: no-repeat;
@@ -37,7 +37,6 @@ p{
     color: #F5F5DC; /* Set the text color to contrast with the background */
     /* padding-top: 20px; */
     padding: 10px 55% 10% 50px;
-  
 }
 
 #offer{

@@ -7,7 +7,9 @@ const Header: React.FunctionComponent = () => {
   const location = useLocation();
 
   return (
-    <AppBar sx={{backgroundColor: "whitesmoke"}} >
+    <AppBar 
+    sx={{backgroundColor: "whitesmoke"}} 
+      className='header'>
           <nav>
         
           <div className='headerlogo' > 
@@ -19,7 +21,7 @@ const Header: React.FunctionComponent = () => {
                       <b> RIKKE KIRKEGAARD </b> 
                     </h1>       
                     <Typography variant='h6' sx={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"}}>
-                      Autoriseret Klinisk Diætist
+                      Autoriseret Klinisk Diætist | Aarhus
                     </Typography>
                 </Stack>
             </Link>

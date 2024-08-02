@@ -6,7 +6,7 @@ import Forløb from './pages/Forløb/Forløb.tsx';
 import Spiseforstyrrelse from './pages/Spiseforstyrrelse/Spiseforstyrrelse.tsx';
 import OmMig from './pages/OmMig/OmMig.tsx';
 import Priser from './pages/Priser/Priser.tsx';
-import Kontakt from './pages/Kontakt/Kontakt.tsx';
+import {Kontakt} from './pages/Kontakt/Kontakt.tsx';
 import MobileMenu from './components/MobileMenu.jsx';
 import CookieConsentComponent from './components/Cookies.tsx';
 
@@ -35,7 +35,7 @@ function App() {
         </main>
         <Footer/>
         <div id='credits' style={{fontSize: '8pt', backgroundColor: 'white', textAlign: 'center'}}>
-          <p style={{margin: "2px"}}>Made by Marcus Kofoed Kirkegaard |  Copyright © 2023</p>
+          <p style={{margin: "2px"}}>Made by Marcus Kofoed Kirkegaard |  Copyright © 2023-2024</p>
         </div>
       </div>
     </HashRouter>

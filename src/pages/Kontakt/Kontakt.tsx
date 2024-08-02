@@ -1,10 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material';
-import RoomIcon from '@mui/icons-material/Room';
 import './Kontakt.css';
 import React from 'react';
-import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
-import { FaLinkedin, FaGithub, FaMapMarkerAlt } from 'react-icons/fa';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import PlaceIcon from '@mui/icons-material/Place';
@@ -13,15 +9,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
-const Kontakt: React.FunctionComponent = () => {
-    
-    //56,15944° N, 10,21263° E
-    const location = [56.15944, 10.21263];
-
-    const customIcon = L.icon({
-        iconUrl: 'mui/icons-material/Place',
-        iconSize: [60, 60],
-      });  
+export const Kontakt: React.FunctionComponent = () => {
     return (
         <Box sx={{width: "80%", margin: "auto", paddingTop: "85px"}}>
             
@@ -68,34 +56,14 @@ const Kontakt: React.FunctionComponent = () => {
                     
                 </Stack>
                     
-                <MapContainer 
-                    center={location} 
-                    zoom={12} 
-                    style={{ height: '400px', width: "95%", marginBottom: "20px",
-                            borderRadius: '10px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', zIndex: 1}}
-                    maxZoom={18} 
-                    minZoom={10}
-                    scrollWheelZoom={false}
-                >
-        
-                    <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    />
-        
-                    <Marker position={location} icon={customIcon}>
-                        <Popup>Your Location</Popup>
-                    </Marker>
-        
-                </MapContainer>
-
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2221.8653799327853!2d10.2099978767691!3d56.15943216059825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c3f97a98a5f77%3A0x71bc9941a4579a72!2sst%2C%20Mejlgade%2044e%2C%208000%20Aarhus!5e0!3m2!1sen!2sdk!4v1708245286166!5m2!1sen!2sdk" 
+                    width="auto" 
+                    height="400" 
+                    style={{border: 0, marginBottom: 25}} 
+                    loading="lazy"
+                />
             </Stack>
-
         </Box>
-        
-
-
     );
 };
-
-export default Kontakt;
