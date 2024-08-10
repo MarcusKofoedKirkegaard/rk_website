@@ -339,6 +339,14 @@ const Priser: React.FunctionComponent = () => {
               <TableCell align="left">3x opfølgningssamtaler </TableCell>
               <TableCell align="right">kr. 2.400,00</TableCell>
             </TableRow>
+            <TableRow>
+              <TableCell align="left">5x NADA Akupunktur </TableCell>
+              <TableCell align="right">kr. 400,00</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell align="left">10x NADA Akupunktur </TableCell>
+              <TableCell align="right">kr. 750,00</TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </Box>
@@ -440,7 +448,7 @@ const Priser: React.FunctionComponent = () => {
           <TableBody>
             <TableRow>
               <TableCell align="left"> NADA Akupunktur </TableCell>
-              <TableCell align="right"> kr. 75,00</TableCell>
+              <TableCell align="right"> kr. 85,00</TableCell>
             </TableRow>
           </TableBody>
         </Table>

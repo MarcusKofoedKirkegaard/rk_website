@@ -4,29 +4,12 @@ import {
   List,
   ListItem,
   Stack,
-  Tab,
   Tabs,
   Typography,
 } from "@mui/material";
 import "./OmMig.css";
 import React from "react";
 import { Link } from "react-router-dom";
-
-const udtalelse1 = () => {
-  const udtalelse = `"I mit forløb med Rikke har hun gjort sig umage for at lære mig at kende og forstå,`;
-  const ud2 = `hvor jeg er i livet. Jeg er blevet mødt i øjenhøjde, og Rikke har ikke bare forholdt sig til, `;
-  const ud3 = `hvad jeg putter på min tallerken, men har set hele mig og haft min trivsel på hjertet. `;
-  const ud4 = `I mit tempo har Rikke hjulpet mig med både kost, motion og kropsbillede.`;
-  const ud5 = `Forløbet har været guld værd for mig, og Rikkes tålmodighed og støtte vejen har betydet alt."`;
-
-  const myArray = new Array();
-  myArray.push(udtalelse);
-  myArray.push(ud2);
-  myArray.push(ud3);
-  myArray.push(ud4);
-  myArray.push(ud5);
-  return myArray;
-};
 
 export const StyledCard: React.FunctionComponent<{
   title: string;
@@ -56,13 +39,15 @@ export const StyledCard: React.FunctionComponent<{
         >
           {title}
         </Typography>
-        <Typography
-          sx={{ whiteSpace: "pre-wrap" }}
-          color="white"
-          fontFamily="inherit"
-        >
-          {text}
-        </Typography>
+        <Box>
+          <Typography
+            sx={{ whiteSpace: "pre-wrap", textOverflow: "ellipsis" }}
+            color="white"
+            fontFamily="inherit"
+          >
+            {text}
+          </Typography>
+        </Box>
         {/* {text.map(segment => {
                     return(
                         <Typography fontFamily="inherit" fontStyle="italic" sx={{color: "white"}}>{segment}</Typography>
