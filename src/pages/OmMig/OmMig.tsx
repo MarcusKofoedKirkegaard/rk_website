@@ -22,7 +22,8 @@ export const StyledCard: React.FunctionComponent<{
         marginBottom: "50px",
         backgroundColor: "#b4a68f",
         width: "450px",
-        height: "275px",
+        height: "550px",
+        textOverflow: "ellipsis",
         margin: "auto",
         "&:hover": {
           transform: "scale(1.01)",
@@ -30,7 +31,7 @@ export const StyledCard: React.FunctionComponent<{
         transition: "transform 0.3s ease-in-out",
       }}
     >
-      <Box sx={{ margin: "20px" }}>
+      <Box sx={{ margin: "20px", textOverflow: "ellipsis" }}>
         <Typography
           paddingBottom="20px"
           fontFamily="inherit"
@@ -41,6 +42,7 @@ export const StyledCard: React.FunctionComponent<{
         </Typography>
         <Box>
           <Typography
+            height="100%"
             sx={{ whiteSpace: "pre-wrap", textOverflow: "ellipsis" }}
             color="white"
             fontFamily="inherit"
