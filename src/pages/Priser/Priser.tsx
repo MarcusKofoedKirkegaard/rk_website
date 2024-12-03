@@ -312,16 +312,46 @@ const Priser: React.FunctionComponent = () => {
               <TableCell align="left">
                 Opstartssamtale (90 min) inkl. udarbejdelse af individuel
                 kostplan eller skriftligt materiale
+                <Typography fontSize="small" fontStyle="italic">
+                  <b>Bemærk:</b> Prisen stiger til 1550 kr. fra d 1. januar 2025
+                </Typography>
               </TableCell>
               <TableCell align="right">kr. 1.450,00</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell align="left">Opfølgningssamtale (60 min)</TableCell>
+              <TableCell align="left">
+                Opfølgningssamtale (55 min)
+                <Typography fontSize="small" fontStyle="italic">
+                  <b>Bemærk:</b> Prisen stiger til 925 kr. fra d 1. januar 2025
+                </Typography>
+              </TableCell>
               <TableCell align="right"> kr. 850,00</TableCell>
             </TableRow>
             <TableRow>
               <TableCell align="left">Tilkøb af individuel kostplan</TableCell>
-              <TableCell align="right">kr. 500,00</TableCell>
+              <TableCell align="right">kr. 600,00</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell align="left">
+                Regulering/tilpasning af kostplan mellem samtaler
+              </TableCell>
+              <TableCell align="right">kr. 300,00</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </Box>
+
+      <Box sx={{ paddingBottom: "50px" }}>
+        <Table>
+          <TableHead>
+            <TableCell>
+              <Typography variant="h6">Familiesamtaler</Typography>
+            </TableCell>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell align="left">Familiesamtale (75 min) </TableCell>
+              <TableCell align="right">kr. 1.200,00</TableCell>
             </TableRow>
           </TableBody>
         </Table>
@@ -336,14 +366,20 @@ const Priser: React.FunctionComponent = () => {
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell align="left">3x opfølgningssamtaler </TableCell>
+              <TableCell align="left">
+                3x opfølgningssamtaler
+                <Typography fontSize="small" fontStyle="italic">
+                  <b>Bemærk:</b> Prisen stiger til 2.550 kr. fra d 1. januar
+                  2025
+                </Typography>
+              </TableCell>
               <TableCell align="right">kr. 2.400,00</TableCell>
             </TableRow>
           </TableBody>
         </Table>
       </Box>
 
-      <Box sx={{ paddingBottom: "50px" }}>
+      {/* <Box sx={{ paddingBottom: "50px" }}>
         <Table>
           <TableHead>
             <TableCell>
@@ -425,10 +461,10 @@ const Priser: React.FunctionComponent = () => {
                         <TableRow>
                             <TableCell align='left'>3 x opfølgningssamtale online + tilpasning af kostplan</TableCell>
                             <TableCell align='right'>kr.    2.500,00</TableCell>
-                        </TableRow> */}
+                        </TableRow> 
           </TableBody>
         </Table>
-      </Box>
+      </Box> */}
 
       <Box sx={{ paddingBottom: "50px" }}>
         <Table>
@@ -485,7 +521,13 @@ const Priser: React.FunctionComponent = () => {
                     id="panel1a-header"
                     sx={{ paddingLeft: "0px" }}
                   >
-                    Psykoedukation (60 min)
+                    <Stack>
+                      Psykoedukation (60 min)
+                      <Box fontStyle="italic">
+                        <b>Bemærk:</b> Prisen stiger til 1.250 kr. fra d 1.
+                        januar 2025
+                      </Box>
+                    </Stack>
                   </AccordionSummary>
                   <AccordionDetails>
                     <i>
@@ -519,7 +561,13 @@ const Priser: React.FunctionComponent = () => {
                     id="panel1a-header"
                     sx={{ paddingLeft: "0px" }}
                   >
-                    Spisevejledning (60 min)
+                    <Stack spacing={2}>
+                      Spisevejledning (pr. påbegyndt time)
+                      <Box fontStyle="italic">
+                        <b>Bemærk:</b> Prisen stiger til 1.300 kr. fra d 1.
+                        januar 2025
+                      </Box>
+                    </Stack>
                   </AccordionSummary>
                   <AccordionDetails>
                     <i>
@@ -534,6 +582,36 @@ const Priser: React.FunctionComponent = () => {
                 </Accordion>
               </TableCell>
               <TableCell align="right">kr. 1.000,00</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell align="left">
+                <Accordion
+                  disableGutters
+                  elevation={0}
+                  sx={{
+                    "&:before": {
+                      display: "none",
+                    },
+                    paddingLeft: "0px",
+                  }}
+                >
+                  <AccordionSummary
+                    // expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    sx={{ paddingLeft: "0px" }}
+                  >
+                    Måltidstræning inkl. måltid
+                  </AccordionSummary>
+                  {/* <AccordionDetails>
+                    <i>
+                      Udarbejdelse af dokumentation eller status til
+                      forsikringsselskaber, Udbetaling Danmark, kommuner osv.
+                    </i>
+                  </AccordionDetails> */}
+                </Accordion>
+              </TableCell>
+              <TableCell align="right">kr. 1.500,00</TableCell>
             </TableRow>
             <TableRow>
               <TableCell align="left">
