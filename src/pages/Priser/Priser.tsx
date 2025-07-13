@@ -335,7 +335,9 @@ const Priser: React.FunctionComponent = () => {
               <TableCell align="left">
                 Regulering/tilpasning af kostplan mellem samtaler
               </TableCell>
-              <TableCell align="right">kr. 300,00</TableCell>
+              <TableCell align="right">
+                kr. 300,00 <br /> pr. påbegyndt halve time
+              </TableCell>
             </TableRow>
           </TableBody>
         </Table>
